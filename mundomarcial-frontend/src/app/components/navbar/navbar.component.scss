@@ -44,6 +44,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left; 
+  word-wrap: break-word;
 }
 
 .version-text {
@@ -104,12 +106,23 @@ span {
   .navbar {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
+    background-color: #707070;
+  }
+  .navbar-scrolled {
+    background-color: var(--color-footer-bg, #232323);
   }
   .brand-logo {
     height: 32px;
   }
   .navbar-brand {
     font-size: 1.05rem;
+  }
+  .brand-text {
+    font-size: 0.9rem; 
+    text-align: center;
+  }
+  .version-text {
+    font-size: 0.7rem;
   }
   .nav-link {
     font-size: 0.97rem;
@@ -119,11 +132,22 @@ span {
   .nav-link i {
     font-size: 1rem;
   }
+  .navbar-toggler-icon {
+    width: 1rem; /* Ajusta el ancho del ícono */
+    height: 1rem; /* Ajusta el alto del ícono */
+  }
+  .navbar-toggler {
+    padding: 0.2rem 0.5rem;
+  }
 }
 
 @media (max-width: 430px) {
   .navbar {
     padding: 0.5rem 0;
+    background-color: #707070;
+  }
+  .navbar-scrolled {
+    background-color: var(--color-footer-bg, #232323);
   }
   .brand-logo {
     height: 24px;
@@ -132,11 +156,22 @@ span {
     font-size: 0.9rem;
     text-align: center;
   }
+  .brand-text {
+    font-size: 0.8rem; 
+    text-align: center;
+  }
+  .version-text {
+    font-size: 0.5rem;
+  }
   .nav-link {
     font-size: 0.85rem;
     padding: 0.2rem 0.3rem;
   }
   .nav-link i {
     font-size: 0.8rem;
+  }
+  .navbar-toggler-icon {
+    width: 1rem; /* Ajusta el ancho del ícono */
+    height: 1rem; /* Ajusta el alto del ícono */
   }
 }

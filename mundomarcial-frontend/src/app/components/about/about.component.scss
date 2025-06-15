@@ -131,12 +131,17 @@
 
 /* Responsividad para pantallas medianas */
 @media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 0; /* Reduce el padding superior e inferior */
+  }
+
   .about-container {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 0;
-    padding: 0;
-    text-align: center;
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+  }
+
+  .map-container {
+    margin-top: 0; /* Elimina cualquier margen superior */
+    padding-top: 0; /* Elimina cualquier padding superior */
   }
   .about-text {
     margin: 0; // Eliminar márgenes adicionales
