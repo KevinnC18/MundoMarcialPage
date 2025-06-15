@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-primary: #002fff;
+  --color-primary-dark: #001bb3;
+  --color-secondary: #232323;
+  --color-accent: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-bg: #f8f9fa;
+  --color-bg-dark: #525252;
+  --color-text: #888888;
+  --color-text-light: #fff;
+  --color-border: #444;
+  --color-link: #007bff;
+  --color-link-hover: #0056b3;
+  --color-footer-bg: #3d3d3d;
+  --color-footer-divider: #444;
+  --color-footer-link: #ccc;
+  --color-footer-link-hover: #d42e2e;
+  --color-footer-policy: #999;
+  --color-footer-branch: #fff;
+  --color-footer-contact: #bbb;
+  --color-footer-cert-bg: #fff;
+  --color-footer-cert-border: #e0e0e0;
+  --color-footer-social: #e0e0e0;
+  --color-footer-social-hover: #fff;
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden; // Evita el desbordamiento horizontal
+  max-width: 100%; // Asegura que el contenido no exceda el ancho de la pantalla
+}
+
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  padding-top: 60px; /* Altura estándar del navbar de Bootstrap */
+  
+}

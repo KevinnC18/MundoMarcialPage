@@ -1,0 +1,142 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* vamos a crear un hover que ponga en negrita el texto y lo subraye en la parte inferior */
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.nav-item {
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.navbar{
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    background-color: #707070;
+}
+
+.navbar-scrolled {
+    background-color: var(--color-footer-bg, #232323);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.brand-logo{
+    height: 75px;
+    width: auto;
+    transition: all 0.3s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.version-text {
+  display: inline-block;
+  background-color: #161477;
+  color: #fff;
+  font-size: 0.7rem; 
+  font-weight: bold;
+  padding: 0.2rem 0.5rem; 
+  border-radius: 0.8rem; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+  text-align: center; 
+}
+
+.navbar-scrolled .brand-logo {
+    height: 50px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.nav-link {
+    white-space: nowrap;
+    color: var(--color-footer-link, #e0e0e0);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    margin: 0 0.2rem;
+    position: relative;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--color-footer-link, #e0e0e0);
+}
+
+.nav-item i {
+    margin-right: 0.5rem;
+}
+
+span {
+    color: var(--color-footer-link, #e0e0e0);
+}
+
+.navbar-toggler-icon {
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon.rotate {
+  transform: rotate(90deg);
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  .brand-logo {
+    height: 32px;
+  }
+  .navbar-brand {
+    font-size: 1.05rem;
+  }
+  .nav-link {
+    font-size: 0.97rem;
+    padding: 0.3rem 0.5rem;
+    gap: 0.2rem;
+  }
+  .nav-link i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  .brand-logo {
+    height: 24px;
+  }
+  .navbar-brand {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .nav-link i {
+    font-size: 0.8rem;
+  }
+}

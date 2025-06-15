@@ -1,0 +1,70 @@
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Estilos generales para la tabla */
+.table {
+  margin: 0 auto;
+  width: 80%; 
+  border-collapse: collapse;
+  text-align: center;
+  align-items: center;
+}
+
+.table th, .table td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 576px) {
+  .table {
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    display: block;
+  }
+
+  .table thead {
+    display: none; /* Oculta los encabezados */
+  }
+
+  .table th, .table td {
+    font-size: 1rem; /* Ajusta el tamaño de fuente para mejor legibilidad */
+    padding: 0.5rem;
+    display: block;
+    text-align: left;
+    width: 223%; 
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+  }
+
+  .table td {
+    position: relative;
+    padding-left: 5rem; /* Espacio para el encabezado */
+  }
+
+  .table td::before {
+    content: attr(data-label); /* Muestra el encabezado como texto antes del contenido */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .table img {
+    max-height: 250px;
+    max-width: 100%; /* Ajusta las imágenes al ancho completo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}

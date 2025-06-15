@@ -1,0 +1,53 @@
+<!-- Navbar principal -->
+<nav class="navbar navbar-expand-lg fixed-top" [class.navbar-scrolled] = "isScrolled">
+  <div class="container">
+    <!-- Logo de marca-->
+    <a class="navbar-brand d-flex align-items-center">
+      <img src="assets/Logos/logo.webp" alt="Logo de la marca" class="brand-logo me-2">
+      <div class="brand-text">
+        <span>"Si quieres ser de los mejores, entrena con los mejores"</span>
+        <h6 class="version-text">V 1.0.0</h6>
+      </div>
+    </a>
+
+    <!-- Botón del menú móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
+      <span class="navbar-toggler-icon" [class.rotate]="menuOpen"></span>
+    </button>
+
+    <!-- Contenidos del menu-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Inicio -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/inicio" routerLinkActive="active">
+            <i class="fas fa-home"></i> Inicio
+          </a>
+        </li>
+
+        <!--Instructores-->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/instructores" routerLinkActive="active">
+            <i class="fas fa-people-group"></i> Instructores
+          </a>
+        </li>
+
+        <!--Preinscripcion-->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/capsulas" routerLinkActive="active">
+            <i class="fas fa-capsules"></i> Capsulas Informativas
+          </a>
+        </li>
+
+        <!--Contacto-->
+        <li class="nav-item">
+          <a class="nav-link" href="https://linktr.ee/MundoMarciall" target="_blank">
+            <i class="fas fa-circle-info"></i> Contactanos
+          </a>
+        </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>

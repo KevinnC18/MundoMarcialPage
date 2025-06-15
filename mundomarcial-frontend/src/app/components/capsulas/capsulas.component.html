@@ -1,0 +1,101 @@
+<section class="capsule-list-section">
+  <div class="capsule-list-container">
+    <div class="capsule-grid">
+
+      <!-- Tarjeta 1 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 1}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/coach_oxz0pj.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+        <div class="capsule-info">
+          <h5 class="capsule-name">Historia del taekwondo</h5>
+          <button class="btn-more-info" (click)="toggleCard(1)">
+            <i class="fas fa-info-circle"></i> Aprende
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 1">
+            <p>Según los coreanos, los orígenes del taekwondo se remontan al año 50 antes de Cristo, con la práctica de un arte marcial llamado Taekkyon. oficialmente fue fundado
+              el 11 de abril de 1955, en Seúl, Corea del sur, por el general Choi Hong Hi. En 1973 se fundó la World Taekwondo Federation en Corea del sur, actualmente conocida como WT. <br>
+              Hizo su primera presentación en 1988 como un deporte de exhibición en los Juegos Olímpicos de Seúl (Corea del Sur). En este evento participaron 183 atletas (120 hombres y 
+              63 mujeres) de 34 países diferentes en 8 diferentes divisiones de peso, tanto para hombres como para mujeres. Fue reconocido como deporte olímpico en Sidney 2000.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 2}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/Taekwondo_orlns9.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+        <div class="capsule-info">
+          <h5 class="capsule-name">Historia del taekwondo en COlombia</h5>
+          <button class="btn-more-info" (click)="toggleCard(2)">
+            <i class="fas fa-info-circle"></i> Aprende
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 2">
+            <p>El taekwondo llegó a Colombia en 1964 y las ciudades que lo empezaron a practicar fueron Bogotá y Medellín con el profesor coreano Sahn Young Han. 
+              En Medellín se practicó desde 1966 con el profesor coreano Huan Su Sohn. Para el año 1967 se institucionaliza y oficializa el taekwondo en Colombia, 
+              a través de un convenio entre la Universidad de América en Bogotá, y el gobierno de Corea, junto con la llegada del maestro Kyong Deuk Lee al país. <br>
+              En 1969, otro maestro coreano, Woo Young Lee, conocido como Carlos Lee, hace su entrada al país aportando al taekwondo nacional sus conocimientos. 
+              La Federación Colombiana de Taekwondo, se fundó el 9 de diciembre de 1978 mediante asamblea de las ligas de Atlántico, Bolívar y Sucre en la ciudad de Barranquilla y 
+              en 1979 fue reconocida oficialmente por Coldeportes Nacional.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 3}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/entrenar_iydenz.jpg" class="capsule-image" alt="¿Por qué entrenar taekwondo?">
+        <div class="capsule-info">
+          <h5 class="capsule-name">¿Por qué entrenar taekwondo?</h5>
+          <button class="btn-more-info" (click)="toggleCard(3)">
+            <i class="fas fa-info-circle"></i> Descúbrelo
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 3">
+            <p>El taekwondo puede brindar beneficios en la organización, la visión, el desarrollo corporal y la conciencia mental. 
+              El objetivo de este arte marcial es fomentar la autoestima, el conocimiento de la autodefensa y un mayor bienestar mental y físico.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 4}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/entrenamiento_oq5evd.jpg" class="capsule-image" alt="Beneficios del entrenamiento">
+        <div class="capsule-info">
+          <h5 class="capsule-name">Beneficios del entrenamiento</h5>
+          <button class="btn-more-info" (click)="toggleCard(4)">
+            <i class="fas fa-info-circle"></i> Descúbrelos
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 4">
+            <p>Entrenar taekwondo ofrece una amplia gama de beneficios físicos y mentales. A nivel físico, mejora la flexibilidad, fuerza, coordinación, resistencia y reflejos. 
+              También fortalece el sistema cardiovascular y aumenta la capacidad pulmonar. Mentalmente, fomenta la disciplina, el respeto, la autoconfianza y la reducción del estrés. 
+              Además, el taekwondo puede mejorar la concentración, la autoestima y las habilidades de liderazgo. </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 5}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/poster_wt5nqw.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+        <div class="capsule-info">
+          <h5 class="capsule-name">¿Por qué elegir Mundo Marcial?</h5>
+          <button class="btn-more-info" (click)="toggleCard(5)">
+            <i class="fas fa-info-circle"></i> Descúbrelo
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 5">
+            <p>Mundo Marcial ofrece entrenadores altamente calificados y un ambiente ideal para desarrollar tus habilidades marciales.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 6}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/poster_wt5nqw.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+        <div class="capsule-info">
+          <h5 class="capsule-name">Otra capsula</h5>
+          <button class="btn-more-info" (click)="toggleCard(6)">
+            <i class="fas fa-info-circle"></i> Descubre
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 6">
+            <p>Descripción de la capsula</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
