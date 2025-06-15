@@ -5,7 +5,6 @@ import { InstructoresComponent } from './components/instructores/instructores.co
 import { CapsulasComponent } from './components/capsulas/capsulas.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'inicio', component: AboutComponent },
   { path: 'instructores', component: InstructoresComponent },
   { path: 'capsulas', component: CapsulasComponent },
