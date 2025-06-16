@@ -22,14 +22,14 @@ import { HorariosComponent } from './components/horarios/horarios.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CarouselComponent,
     AboutComponent,
     InstructoresComponent,
     FooterComponent,
     CapsulasComponent,
     GaleriaComponent,
-    HorariosComponent
+    HorariosComponent,
+    NavbarComponent 
   ],
   imports: [
     BrowserModule,
