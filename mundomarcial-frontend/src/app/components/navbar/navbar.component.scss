@@ -18,9 +18,12 @@
 }
 
 .navbar{
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     transition: all 0.3s ease;
     background-color: #707070;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
 }
 
 .navbar-scrolled {
@@ -46,6 +49,9 @@
   align-items: flex-start;
   text-align: left; 
   word-wrap: break-word;
+  font-size: 1.5rem; 
+  max-width: 90%; 
+  line-height: 1.2;
 }
 
 .version-text {
@@ -104,8 +110,7 @@ span {
 
 @media (max-width: 768px) {
   .navbar {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding: 1rem 0.5rem;
   }
   .brand-logo {
     height: 26px;
@@ -114,9 +119,8 @@ span {
     font-size: 1.05rem;
   }
   .brand-text {
-    font-size: 0.9rem; 
-    text-align: center;
-    word-wrap: break-word;
+    font-size: 0.8rem; 
+    max-width: 100%; 
   }
   .version-text {
     font-size: 0.7rem;
@@ -151,8 +155,8 @@ span {
     word-wrap: break-word;
   }
   .brand-text {
-    font-size: 0.8rem; 
-    text-align: center;
+    font-size: 0.7rem; /* Reduce aún más el tamaño en pantallas muy pequeñas */
+    max-width: 100%; /* Asegura que el texto se ajuste completamente */
   }
   .version-text {
     font-size: 0.5rem;
