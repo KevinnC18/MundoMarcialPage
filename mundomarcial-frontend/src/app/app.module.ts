@@ -16,6 +16,7 @@ import { CapsulasComponent } from './components/capsulas/capsulas.component';
 import { AboutComponent } from './components/about/about.component';
 import { InstructoresComponent } from './components/instructores/instructores.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     InstructoresComponent,
     FooterComponent,
-    CapsulasComponent
+    CapsulasComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,

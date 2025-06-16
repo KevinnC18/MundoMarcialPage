@@ -4,13 +4,48 @@
 
       <!-- Tarjeta 1 -->
       <div class="capsule-card" [ngClass]="{'expanded': activeCard === 1}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/poster_wt5nqw.jpg" class="capsule-image" alt="Beneficios del entrenamiento">
+        <div class="capsule-info">
+          <h5 class="capsule-name">¿Qué es el taekwondo?</h5>
+          <button class="btn-more-info" (click)="toggleCard(1)">
+            <i class="fas fa-arrow-down"></i> Atrévete a conocerlo
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 1">
+            <p>El Taekwondo es un legendario arte marcial coreano de defensa personal, transformado en deporte olímpico, que se ha desarrollado durante más de veinte siglos. 
+              Su principal característica es que es un arte y deporte a la vez, en el cual se promueve no solamente el aspecto físico deportivo, sino también la disciplina, 
+              el enriquecimiento de los valores personales y el respeto hacia los demás, en especial hacia los superiores. <br> Físicamente, el practicante desarrolla al máximo 
+              las habilidades de su cuerpo, como fuerza, elasticidad, resistencia e integración (o adaptabilidad) en cualquier medio en el que se desenvuelvan sus actividades, 
+              logrando así un desarrollo armónico y funcional de todo el organismo. Espiritualmente, el Taekwondo adiestra a sus practicantes a perseverar en sus objetivos y a 
+              afrontar sus responsabilidades con valentía, inculcándoles ideales de justicia y compañerismo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 1 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 2}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/eventos_jfum4o.jpg" class="capsule-image" alt="Beneficios del entrenamiento">
+        <div class="capsule-info">
+          <h5 class="capsule-name">¿Quiénes pueden practicarlo?</h5>
+          <button class="btn-more-info" (click)="toggleCard(2)">
+            <i class="fas fa-user-plus"></i> Anímate
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 2">
+            <p>Entrenar taekwondo ofrece una amplia gama de beneficios físicos y mentales. A nivel físico, mejora la flexibilidad, fuerza, coordinación, resistencia y reflejos. 
+              También fortalece el sistema cardiovascular y aumenta la capacidad pulmonar. Mentalmente, fomenta la disciplina, el respeto, la autoconfianza y la reducción del estrés. 
+              Además, el taekwondo puede mejorar la concentración, la autoestima y las habilidades de liderazgo. </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 3}">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/coach_oxz0pj.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
         <div class="capsule-info">
           <h5 class="capsule-name">Historia del taekwondo</h5>
-          <button class="btn-more-info" (click)="toggleCard(1)">
-            <i class="fas fa-info-circle"></i> Aprende
+          <button class="btn-more-info" (click)="toggleCard(3)">
+            <i class="fas fa-info"></i> Aprende
           </button>
-          <div class="capsule-details" *ngIf="activeCard === 1">
+          <div class="capsule-details" *ngIf="activeCard === 3">
             <p>Según los coreanos, los orígenes del taekwondo se remontan al año 50 antes de Cristo, con la práctica de un arte marcial llamado Taekkyon. oficialmente fue fundado
               el 11 de abril de 1955, en Seúl, Corea del sur, por el general Choi Hong Hi. En 1973 se fundó la World Taekwondo Federation en Corea del sur, actualmente conocida como WT. <br>
               Hizo su primera presentación en 1988 como un deporte de exhibición en los Juegos Olímpicos de Seúl (Corea del Sur). En este evento participaron 183 atletas (120 hombres y 
@@ -19,15 +54,15 @@
         </div>
       </div>
 
-      <!-- Tarjeta 2 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 2}">
+      <!-- Tarjeta 4 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 4}">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/Taekwondo_orlns9.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
         <div class="capsule-info">
           <h5 class="capsule-name">Historia del taekwondo en Colombia</h5>
-          <button class="btn-more-info" (click)="toggleCard(2)">
-            <i class="fas fa-info-circle"></i> Aprende
+          <button class="btn-more-info" (click)="toggleCard(4)">
+            <i class="fas fa-magnifying-glass"></i> Edúcate
           </button>
-          <div class="capsule-details" *ngIf="activeCard === 2">
+          <div class="capsule-details" *ngIf="activeCard === 4">
             <p>El taekwondo llegó a Colombia en 1964 y las ciudades que lo empezaron a practicar fueron Bogotá y Medellín con el profesor coreano Sahn Young Han. 
               En Medellín se practicó desde 1966 con el profesor coreano Huan Su Sohn. Para el año 1967 se institucionaliza y oficializa el taekwondo en Colombia, 
               a través de un convenio entre la Universidad de América en Bogotá, y el gobierno de Corea, junto con la llegada del maestro Kyong Deuk Lee al país. <br>
@@ -38,30 +73,29 @@
         </div>
       </div>
 
-      <!-- Tarjeta 3 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 3}">
+      <!-- Tarjeta 5 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 5}">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/entrenar_iydenz.jpg" class="capsule-image" alt="¿Por qué entrenar taekwondo?">
         <div class="capsule-info">
           <h5 class="capsule-name">¿Por qué entrenar taekwondo?</h5>
-          <button class="btn-more-info" (click)="toggleCard(3)">
-            <i class="fas fa-info-circle"></i> Descúbrelo
+          <button class="btn-more-info" (click)="toggleCard(5)">
+            <i class="fas fa-wand-magic-sparkles"></i> Descúbrelo
           </button>
-          <div class="capsule-details" *ngIf="activeCard === 3">
-            <p>El taekwondo puede brindar beneficios en la organización, la visión, el desarrollo corporal y la conciencia mental. 
-              El objetivo de este arte marcial es fomentar la autoestima, el conocimiento de la autodefensa y un mayor bienestar mental y físico.</p>
+          <div class="capsule-details" *ngIf="activeCard === 5">
+            <p>Más que dar patadas, el Taekwondo brinda beneficios en la organización, la visión, el desarrollo corporal y la conciencia mental. El objetivo de este arte marcial es fomentar la autoestima, el conocimiento de la autodefensa, un mayor bienestar mental y físico, aumenta fuerza, reflejos, concentración, autoestima, seguridad en sí mismo y proporciona una filosofía de vida más disciplinada y saludable</p>
           </div>
         </div>
       </div>
 
-      <!-- Tarjeta 4 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 4}">
+      <!-- Tarjeta 6 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 6}">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/entrenamiento_oq5evd.jpg" class="capsule-image" alt="Beneficios del entrenamiento">
         <div class="capsule-info">
           <h5 class="capsule-name">Beneficios del entrenamiento</h5>
-          <button class="btn-more-info" (click)="toggleCard(4)">
-            <i class="fas fa-info-circle"></i> Descúbrelos
+          <button class="btn-more-info" (click)="toggleCard(6)">
+            <i class="fas fa-seedling"></i> Descúbrelos
           </button>
-          <div class="capsule-details" *ngIf="activeCard === 4">
+          <div class="capsule-details" *ngIf="activeCard === 6">
             <p>Entrenar taekwondo ofrece una amplia gama de beneficios físicos y mentales. A nivel físico, mejora la flexibilidad, fuerza, coordinación, resistencia y reflejos. 
               También fortalece el sistema cardiovascular y aumenta la capacidad pulmonar. Mentalmente, fomenta la disciplina, el respeto, la autoconfianza y la reducción del estrés. 
               Además, el taekwondo puede mejorar la concentración, la autoestima y las habilidades de liderazgo. </p>
@@ -69,30 +103,54 @@
         </div>
       </div>
 
-      <!-- Tarjeta 5 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 5}">
-        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/poster_wt5nqw.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+      <!-- Tarjeta 7 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 7}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/clase_hcra4y.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
         <div class="capsule-info">
-          <h5 class="capsule-name">¿Por qué elegir Mundo Marcial?</h5>
-          <button class="btn-more-info" (click)="toggleCard(5)">
-            <i class="fas fa-info-circle"></i> Descúbrelo
+          <h5 class="capsule-name">Objetivos del entrenamiento</h5>
+          <button class="btn-more-info" (click)="toggleCard(7)">
+            <i class="fas fa-bullseye"></i> Averígualos
           </button>
-          <div class="capsule-details" *ngIf="activeCard === 5">
-            <p>Mundo Marcial ofrece entrenadores altamente calificados y un ambiente ideal para desarrollar tus habilidades marciales.</p>
+          <div class="capsule-details" *ngIf="activeCard === 7">
+            <p>El Taekwondo no se enfoca solo en formar atletas, sino también en formar mejores personas.
+              Dentro de nuestros objetivos específicos están: <br>
+              • Fomentar una formación integral en deporte, valores y convivencia, ayudándote así a destacar tanto en el Dojang como en la vida. <br>
+              • Desarrollar constancia, paciencia y concentración, fortaleciendo así el carácter de cada practicante. <br>
+              • Superar nuevos grados a partir de pruebas de cinturón, demostrando así el progreso constante en el camino de cada estudiante. <br>
+              • Combatir el estrés, aumentando así el autocontrol, el manejo de emociones y la resiliencia en el deporte y en el día a día. <br>
+              • Crear alternativas para la juventud promoviendo el deporte a nivel recreativo y competitivo para alejarlos del ocio y los malos hábitos.
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Tarjeta 6 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 6}">
-        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/poster_wt5nqw.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+      <!-- Tarjeta 8 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 8}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/equipo_ryhced.jpg" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
         <div class="capsule-info">
-          <h5 class="capsule-name">Otra capsula</h5>
-          <button class="btn-more-info" (click)="toggleCard(6)">
-            <i class="fas fa-info-circle"></i> Descubre
+          <h5 class="capsule-name">Importancia de entrenar en grupo</h5>
+          <button class="btn-more-info" (click)="toggleCard(8)">
+            <i class="fas fa-question-circle"></i> Conócela
           </button>
-          <div class="capsule-details" *ngIf="activeCard === 6">
-            <p>Descripción de la capsula</p>
+          <div class="capsule-details" *ngIf="activeCard === 8">
+            <p>El Taekwondo también es convivencia, apoyo y comunidad. Entrenar en grupo fortalece el espíritu de equipo, el compañero deja de ser un adversario para convertirse en alguien que te motiva, corrige y ayuda a avanzar. Además, los más avanzados comparten sus experiencias con los más nuevos, ayudándoles así en el aprendizaje de posiciones, patadas, defensas y formas. Este entorno de apoyo mutuo proporciona una base más sólida tanto en lo deportivo como en lo personal, ayudándote así a formar relaciones de amistad, a desarrollar habilidades sociales y a forjar un carácter más maduro, seguro y respetuoso.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 9 -->
+      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 9}">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/leon_q3fdlj.png" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
+        <div class="capsule-info">
+          <h5 class="capsule-name">¿Por qué elegir Mundo Marcial?</h5>
+          <button class="btn-more-info" (click)="toggleCard(9)">
+            <i class="fas fa-fire"></i> Elígenos
+          </button>
+          <div class="capsule-details" *ngIf="activeCard === 9">
+            <p>Mundo Marcial ofrece entrenadores altamente calificados y un ambiente ideal para desarrollar tus habilidades en las artes marciales. Además de ser un lugar donde puedes 
+              mejorar tu dominio del Taekwondo, somos más que una academia: somos una familia que te acompaña en tu crecimiento deportivo y personal.
+            </p>
           </div>
         </div>
       </div>

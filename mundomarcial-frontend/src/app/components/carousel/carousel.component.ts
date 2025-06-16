@@ -13,9 +13,10 @@ export class CarouselComponent implements AfterViewInit {
     const carouselElement = document.querySelector('#carouselMundoMarcial');
     console.log('Carousel Element:', carouselElement); 
     if (carouselElement) {
-      new bootstrap.Carousel(carouselElement, {
+      const carouselInstance = new bootstrap.Carousel(carouselElement, {
         interval: 8000, 
-        ride: 'carousel'
+        ride: 'carousel',
+        touch: true
       });
     } else {
       console.error('El elemento del carrusel no se encontró.');

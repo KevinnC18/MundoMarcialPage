@@ -139,45 +139,6 @@ main {
   margin: 0.3rem 0;
 }
 
-
-/* Responsividad para pantallas medianas */
-@media (max-width: 768px) {
-  .footer {
-    padding: 3rem 1.5rem 1.5rem;
-  }
-
-  .footer-container {
-    gap: 1rem;
-  }
-
-  .footer-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .footer-bottom {
-    margin-top: 1rem; 
-  }
-
-  .footer-cert-social {
-    flex-direction: row; 
-    justify-content: space-between;
-    gap: 10rem;
-    white-space: nowrap;
-  }
-
-  .footer-social {
-    text-align: left;
-    font-size: 0.9rem;
-  }
-
-  .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  }
-}
-
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .footer {

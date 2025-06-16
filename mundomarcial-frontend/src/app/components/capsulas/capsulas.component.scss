@@ -1,7 +1,7 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'bootstrap/scss/bootstrap.scss';
 
-/* Sección principal de personajes */
+/* Sección principal  */
 .capsule-list-section {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -13,7 +13,7 @@
   margin: 0 auto;
 }
 
-/* Contenedor de las tarjetas de personajes */
+/* Contenedor de las cápsulas */
 .capsule-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -21,7 +21,7 @@
   padding: 1rem;
 }
 
-/* Tarjeta individual de personaje */
+/* Tarjeta individual */
 .capsule-card {
   background: #fff;
   border-radius: 1rem;
@@ -42,25 +42,26 @@
 }
 
 .capsule-details {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 0.7rem;
+  padding: 0.7rem;
   background-color: #f8f9fa;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #232323;
 }
 
-/* Imagen del personaje */
+/* Imagen */
 .capsule-image {
   width: 100%;
   height: 280px;
   object-fit: cover;
 }
 
-/* Información textual del personaje */
+/* Información textual */
 .capsule-info {
   padding: 1.5rem;
+  text-align: center;
 }
 
 .capsule-name {
@@ -112,5 +113,14 @@
   }
   .btn-more-info {
     font-size: 0.85rem; // Reducir tamaño de botón
+  }
+  .capsule-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    font-size: 0.8rem;
+    color: #232323;
   }
 }
