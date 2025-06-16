@@ -1,10 +1,17 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+body {
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+}
+
 /* vamos a crear un hover que ponga en negrita el texto y lo subraye en la parte inferior */
 .navbar-nav .nav-link:hover {
     font-weight: bold;
     text-decoration: underline;
+    color: #5e5e5e;
 }
 
 .nav-item {
@@ -17,24 +24,30 @@
     -ms-user-select: none;
 }
 
-.navbar{
+.navbar {
     padding: 1.5rem 1rem;
     transition: all 0.3s ease;
-    background-color: #707070;
+    background: url('https://sdmntprwestus.oaiusercontent.com/files/00000000-35f0-6230-8632-54570d7e846c/raw?se=2025-06-16T22%3A54%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=130b29e2-74da-566c-9057-4e44629ce6e8&skoid=61180a4f-34a9-42b7-b76d-9ca47d89946d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-16T12%3A21%3A20Z&ske=2025-06-17T12%3A21%3A20Z&sks=b&skv=2024-08-04&sig=lRYsNQxoc/53ooZGTFDAIQb6oxaZBirIvjP%2BH%2Bif7ug%3D') no-repeat center center; 
+    background-size: cover;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center; 
     flex-wrap: wrap;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .navbar-scrolled {
-    background-color: var(--color-footer-bg, #232323);
+    filter: brightness(85%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 0;
 }
 
 .brand-logo{
-    height: 75px;
+    height: 80px;
     width: auto;
     margin-right: 1rem;
     transition: all 0.3s ease;
@@ -45,19 +58,10 @@
     -ms-user-select: none;
 }
 
-.brand-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: center; 
-  word-wrap: break-word;
-  font-size: 1.5rem;
-  line-height: 1.2;
-}
-
 .version-text {
-  display: inline-block;
+  top: 0.5rem;
+  left: 1rem;
+  position: absolute;
   background-color: #161477;
   color: #fff;
   font-size: 0.7rem; 
@@ -70,7 +74,7 @@
 }
 
 .navbar-scrolled .brand-logo {
-    height: 50px;
+    height: 65px;
     user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -92,7 +96,7 @@
 .nav-link.active {
   font-weight: bold;
   text-decoration: underline;
-  color: var(--color-footer-link, #e0e0e0);
+  color: #ffffff !important;
 }
 
 .nav-item i {
@@ -105,6 +109,8 @@ span {
 
 .navbar-toggler-icon {
   transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 0.2rem;
 }
 
 .navbar-toggler-icon.rotate {
@@ -115,19 +121,20 @@ span {
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+    height: auto;
   }
   .brand-logo {
-    height: 26px;
+    height: 30px;
   }
   .navbar-brand {
     font-size: 1.05rem;
   }
-  .brand-text {
-    font-size: 0.8rem; 
-    max-width: 100%; 
-  }
   .version-text {
     font-size: 0.7rem;
+    position: relative;
+    margin-left: 0.5rem;
+    top: 0.5rem;
   }
   .nav-link {
     font-size: 0.97rem;
@@ -149,18 +156,15 @@ span {
 @media (max-width: 430px) {
   .navbar {
     padding: 0.5rem 0;
+    height: auto;
   }
   .brand-logo {
-    height: 24px;
+    height: 25px;
   }
   .navbar-brand {
     font-size: 0.9rem;
     text-align: center;
     word-wrap: break-word;
-  }
-  .brand-text {
-    font-size: 0.7rem; /* Reduce aún más el tamaño en pantallas muy pequeñas */
-    max-width: 100%; /* Asegura que el texto se ajuste completamente */
   }
   .version-text {
     font-size: 0.5rem;

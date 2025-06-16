@@ -17,6 +17,7 @@ import { AboutComponent } from './components/about/about.component';
 import { InstructoresComponent } from './components/instructores/instructores.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
+import { HorariosComponent } from './components/horarios/horarios.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
     InstructoresComponent,
     FooterComponent,
     CapsulasComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    HorariosComponent
   ],
   imports: [
     BrowserModule,
