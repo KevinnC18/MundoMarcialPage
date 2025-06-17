@@ -70,6 +70,7 @@ img {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .carousel-content h4 {
@@ -134,7 +135,8 @@ img {
 @media (max-width: 992px) {
   .carousel {
     margin-top: 0;
-    height: 100vh;
+    max-height: 800px;
+    height: 100%;
   }
 
   .carousel-item {
