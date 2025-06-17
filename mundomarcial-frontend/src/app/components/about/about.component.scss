@@ -130,7 +130,7 @@
 }
 
 /* Responsividad para pantallas medianas */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .about-section {
     padding: 2rem 0; /* Reduce el padding superior e inferior */
   }
@@ -179,7 +179,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .about-container {
     flex-direction: column; 
     text-align: center; 

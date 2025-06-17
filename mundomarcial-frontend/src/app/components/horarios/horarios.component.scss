@@ -1,0 +1,119 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+.horarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.horario-card {
+  background: #ececec;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px rgba(44,44,44,0.10), 0 1.5px 4px rgba(44,44,44,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 320px;
+  max-width: 780px;
+  width: 100%;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+  max-height: 500px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.horario-card:hover {
+  box-shadow: 0 8px 24px rgba(29, 29, 29, 0.18), 0 2px 8px rgba(44,44,44,0.12);
+}
+
+.horario-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 1.2rem 0;
+  color: #242faa;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 0.5rem;
+  justify-content: center; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+  background: #fafbfc;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(44,44,44,0.06);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.table th, .table td {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #a7a7a7a8;
+  font-weight: bold;
+  color: #000000;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f5f7fa;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .horarios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .horario-card {
+    width: 100%;
+    margin-bottom: 2rem;
+    max-height: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .table {
+    width: 100%;
+    display: block;
+    font-size: 0.98rem;
+  }
+  .table thead {
+    display: none;
+  }
+  .table th, .table td {
+    display: block;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem 0.7rem 0.7rem 5.5rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .table td {
+    position: relative;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 0.7rem;
+    font-weight: bold;
+    color: #1a237e;
+    font-size: 1em;
+  }
+}

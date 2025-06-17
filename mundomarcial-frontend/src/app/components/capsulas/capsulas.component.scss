@@ -95,7 +95,7 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .capsule-grid {
     grid-template-columns: 1fr; // Mostrar una sola columna
     gap: 1rem; // Reducir espacio entre tarjetas
