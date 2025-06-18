@@ -26,13 +26,9 @@ export class NavbarComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (this.isMobile) {
-      // Comportamiento para móviles
-      this.isScrolled = window.scrollY > 50; // Se encoge al bajar
-      this.isScrolled = window.scrollY < 50; // Se expande al subir
+      this.isScrolled = window.scrollY > 50; // Se encoge al bajar, se expande al subir
     } else {
-      // Comportamiento para computadoras
-      this.isScrolled = window.scrollY < 50; // Se expande al estar arriba
-      this.isScrolled = window.scrollY > 50;
+      this.isScrolled = window.scrollY > 50; // Solo se encoge al bajar
     }
   }
 

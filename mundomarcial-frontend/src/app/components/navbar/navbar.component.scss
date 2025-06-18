@@ -27,7 +27,7 @@ body {
 .navbar {
     padding: 1.5rem 1rem;
     transition: all 0.3s ease;
-    background: url('https://res.cloudinary.com/dz1vsm25f/image/upload/fondoNavBar_sl91pf.png') no-repeat center center; 
+    background: url('https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/fondoNavBar_sl91pf.png') no-repeat center center; 
     background-size: cover;
     display: flex;
     justify-content: space-between;
@@ -38,6 +38,7 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    margin-bottom: 0 !important;
 }
 
 .navbar-scrolled {
@@ -120,15 +121,27 @@ span {
 
 @media (max-width: 992px) {
   .navbar {
-    padding: 1rem 0.5rem;
-    margin-bottom: 1rem;
+    padding: 2rem 1rem;
+    margin-bottom: 0 !important;
     height: auto;
   }
+  .navbar-scrolled {
+    padding: 0.5rem 0 0.5rem 0 !important;
+    transition: padding 0.3s ease, height 0.3s ease;
+  }
   .brand-logo {
-    height: 30px;
+    height: 50px;
   }
   .navbar-brand {
     font-size: 1.05rem;
+  }
+  .navbar-scrolled .brand-logo {
+    height: 38px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
   .version-text {
     font-size: 0.7rem;
@@ -153,13 +166,64 @@ span {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .navbar {
-    padding: 0.5rem 0;
+    padding: 1.5rem 0 1.5rem 0;
+    margin-bottom: 0 !important;
     height: auto;
+    transition: padding 0.3s ease, height 0.3s ease;
+  }
+  .navbar-scrolled {
+    padding: 0.5rem 0 0.5rem 0 !important;
+    transition: padding 0.3s ease, height 0.3s ease;
   }
   .brand-logo {
+    height: 40px;
+    transition: height 0.3s ease;
+  }
+  .navbar-scrolled .brand-logo {
     height: 25px;
+    transition: height 0.3s ease;
+  }
+  .navbar-brand {
+    font-size: 0.9rem;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .version-text {
+    font-size: 0.5rem;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .nav-link i {
+    font-size: 0.8rem;
+  }
+  .navbar-toggler-icon {
+    width: 1rem; /* Ajusta el ancho del ícono */
+    height: 1rem; /* Ajusta el alto del ícono */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1.3rem 0 1.3rem 0;
+    margin-bottom: 0 !important;
+    height: auto;
+    transition: padding 0.3s ease, height 0.3s ease;
+  }
+  .navbar-scrolled {
+    padding: 0.3rem 0 0.3rem 0 !important;
+    transition: padding 0.3s ease, height 0.3s ease;
+  }
+  .brand-logo {
+    height: 35px;
+    transition: height 0.3s ease;
+  }
+  .navbar-scrolled .brand-logo {
+    height: 23px;
+    transition: height 0.3s ease;
   }
   .navbar-brand {
     font-size: 0.9rem;
