@@ -36,7 +36,7 @@
 
 .carousel-item img {
   height: 100%;
-  filter: brightness(50%);
+  filter: brightness(60%);
 }
 
 .carousel-overlay {
@@ -147,10 +147,12 @@
 
   .carousel-caption {
     top: 10%; 
+    transform: translate(-50%, 0);
   }
 
   .carousel-caption-bottom {
     bottom: 36%;
+    transform: translate(-50%, 0);
   }
 
   .carousel-content h4 {
@@ -176,10 +178,12 @@
 
   .carousel-caption {
     top: 70%; 
+    transform: translate(-50%, 0);
   }
 
   .carousel-caption-bottom {
     bottom: 35%;
+    transform: translate(-50%, 0);
   }
 
   .carousel-content h4 {
@@ -203,7 +207,13 @@
   }
 
   .carousel-caption {
-    top: 10%; 
+    top: 10%;
+    transform: translate(-50%, 0); 
+  }
+
+  .carousel-caption-bottom {
+    bottom: 40%;
+    transform: translate(-50%, 0);
   }
 
   .carousel-content h4 {
