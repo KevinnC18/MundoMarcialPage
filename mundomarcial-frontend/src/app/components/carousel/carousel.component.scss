@@ -12,11 +12,10 @@
 }
 
 .carousel {
-  margin-top: 2rem; 
+  margin-top: 2rem;
   position: relative;
-  max-height: 800px;
-  width: 100%;
   height: 100vh;
+  max-height: 800px;
   overflow: hidden;
 }
 
@@ -39,35 +38,37 @@
   filter: brightness(50%);
 }
 
-.carousel-overlay {
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
-  pointer-events: none;
 }
 
 .carousel-caption {
   position: absolute;
-  top: 5%; 
+  top: 3%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
+  z-index: 2;
   text-align: center;
-  color: #ffffff; 
+  color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.carousel-caption-bottom {
+.hero-content-bottom {
   position: absolute;
   bottom: 20%; 
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
+  z-index: 2;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  width: 100%;
 }
 
 .carousel-content {
@@ -77,15 +78,15 @@
   transition: all 0.3s ease;
 }
 
-.carousel-content h4 {
-  font-size: 3.5rem;
+.carousel-caption h2 {
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-content p {
+.carousel-caption p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   color: #fff;
@@ -150,16 +151,16 @@
     transform: translate(-50%, 0);
   }
 
-  .carousel-caption-bottom {
+  .hero-content-bottom {
     bottom: 36%;
     transform: translate(-50%, 0);
   }
 
-  .carousel-content h4 {
+  .carousel-caption h2 {
     font-size: 3.5rem;
   }
 
-  .carousel-content p {
+  .carousel-caption p {
     font-size: 1.5rem;
   }
 }
@@ -181,16 +182,16 @@
     transform: translate(-50%, 0);
   }
 
-  .carousel-caption-bottom {
+  .hero-content-bottom {
     bottom: 35%;
     transform: translate(-50%, 0);
   }
 
-  .carousel-content h4 {
+  .carousel-caption h2 {
     font-size: 3rem;
   }
 
-  .carousel-content p {
+  .carousel-caption p {
     font-size: 1.1rem;
   }
 }
@@ -211,16 +212,16 @@
     transform: translate(-50%, 0); 
   }
 
-  .carousel-caption-bottom {
+  .hero-content-bottom {
     bottom: 40%;
     transform: translate(-50%, 0);
   }
 
-  .carousel-content h4 {
+  .carousel-caption h2 {
     font-size: 2.5rem;
   }
 
-  .carousel-content p {
+  .carousel-caption p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
   }
@@ -253,11 +254,17 @@
     transform: translate(-50%, 0); 
   }
 
-  .carousel-content h4 {
+  .hero-content-bottom {
+    bottom: 20%;
+    transform: translate(-50%, 0);
+  }
+
+
+  .carousel-caption h2 {
     font-size: 2rem;
   }
 
-  .carousel-content p {
+  .carousel-caption p {
     font-size: 0.9rem;
     margin-bottom: 1.2rem;
   }
