@@ -27,8 +27,6 @@ body {
 .navbar {
     padding: 1.5rem 1rem;
     transition: all 0.3s ease;
-    background: url('https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/fondoNavBar_sl91pf.png') no-repeat center center; 
-    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -39,10 +37,24 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     margin-bottom: 0 !important;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: url('https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/fondoNavBar_sl91pf.png') no-repeat center center;
+      background-size: cover;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+  
+    &.navbar-scrolled::before {
+      filter: blur(2px);
+    }
 }
 
 .navbar-scrolled {
-    filter: brightness(85%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 0;
 }
@@ -218,11 +230,11 @@ span {
     transition: padding 0.3s ease, height 0.3s ease;
   }
   .brand-logo {
-    height: 35px;
+    height: 45px;
     transition: height 0.3s ease;
   }
   .navbar-scrolled .brand-logo {
-    height: 23px;
+    height: 30px;
     transition: height 0.3s ease;
   }
   .navbar-brand {
