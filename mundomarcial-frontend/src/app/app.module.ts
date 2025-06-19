@@ -18,6 +18,7 @@ import { InstructoresComponent } from './components/instructores/instructores.co
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
 import { HorariosComponent } from './components/horarios/horarios.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HorariosComponent } from './components/horarios/horarios.component';
     MatButtonModule,
     MatSnackBarModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   bootstrap: [AppComponent]
 })
