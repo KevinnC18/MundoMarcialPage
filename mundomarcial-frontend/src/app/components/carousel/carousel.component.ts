@@ -1,6 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
-
-declare var bootstrap: any;
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -8,34 +6,56 @@ declare var bootstrap: any;
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements AfterViewInit {
-  
-  ngAfterViewInit() {
-    // Inicializar el carousel manualmente para asegurar que funcione en producción
-    this.initializeCarousel();
-  }
-
-  private initializeCarousel() {
-    try {
-      // Esperar a que el DOM esté completamente cargado
-      setTimeout(() => {
-        const carouselElement = document.getElementById('carouselMundoMarcial');
-        if (carouselElement && typeof bootstrap !== 'undefined') {
-          // Inicializar el carousel de Bootstrap
-          const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: 6000, // Cambiar slide cada 6 segundos
-            wrap: true,     // Permitir loop infinito
-            keyboard: true, // Permitir navegación con teclado
-            pause: 'hover'  // Pausar en hover
-          });
-          
-          console.log('Carousel inicializado correctamente');
-        } else {
-          console.warn('Bootstrap no está disponible o el elemento carousel no se encontró');
-        }
-      }, 100);
-    } catch (error) {
-      console.error('Error al inicializar el carousel:', error);
+export class CarouselComponent {
+  slides = [
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/combate_1_pweuxx.jpg',
+      alt: 'Combate Taekwondo',
+      title: 'Entrena con los mejores',
+      text: 'En Mundo Marcial puedes encontrar los mejores instructores',
+      link: null
+    },
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/examen_larq8q.jpg',
+      alt: 'Competencias y exámenes',
+      title: 'Vive nuevas experiencias',
+      text: 'Conéctate con deportistas y participa en competencias reconocidas',
+      link: null
+    },
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/bogota_f5r2ma.jpg',
+      alt: 'Sede Bogotá',
+      title: 'Sede Bogotá',
+      text: 'Contamos con dos sedes en la capital. ¡Únete a esta gran familia!',
+      link: 'https://forms.gle/kRT7bjLXZo63kB3Z6'
+    },
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/grupo_qjjhup.jpg',
+      alt: 'Sede Villavicencio',
+      title: 'Sede Villavicencio',
+      text: 'También contamos con una sede en Villavicencio. ¡Haz parte de nuestra comunidad!',
+      link: 'https://forms.gle/c46M68DiR9FAGtkQA'
+    },
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/Ecole_bv7w0j.jpg',
+      alt: 'Alianzas con colegios en Bogotá',
+      title: 'Alianza con colegios',
+      text: 'Trabajamos con \'Ecole Granandino\' y \'Chiquillos Creativos\' en Bogotá',
+      link: null
+    },
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/Ecole_bv7w0j.jpg',
+      alt: 'Alianzas con colegios en Villavicencio',
+      title: 'Alianza educativa',
+      text: 'Con los colegios Espíritu Santo, Gimnasio Los Alcázares y José Antonio Páez en Villavicencio',
+      link: null
+    },
+    {
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/combate_oc2aw3.jpg',
+      alt: 'Eventos deportivos y vacacionales',
+      title: 'Eventos deportivos',
+      text: 'Participa en torneos, campamentos y actividades vacacionales únicas',
+      link: null
     }
-  }
+  ];
 }
