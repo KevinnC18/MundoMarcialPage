@@ -136,7 +136,7 @@
   }
 
   .about-container {
-    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+    margin: 1rem; 
   }
 
   .map-container {
@@ -165,7 +165,7 @@
     height: 200px; 
     margin: 0; 
   }
-  .about-text, .about-labs-image {
+  .about-text, .about-image {
     justify-content: center;
     align-items: center;
     margin-inline: 0.5rem;
@@ -182,7 +182,6 @@
 @media (max-width: 600px) {
   .about-container {
     flex-direction: column; 
-    text-align: center; 
     gap: 1rem; 
     margin-top: 0; 
     padding: 0;
@@ -190,6 +189,9 @@
   .about-text {
     margin: 0; // Eliminar márgenes adicionales
     padding: 0; // Eliminar padding adicional
+  }
+  .about-description {
+    text-align: justify; 
   }
   .about-locations {
     margin-top: 0.5rem;
