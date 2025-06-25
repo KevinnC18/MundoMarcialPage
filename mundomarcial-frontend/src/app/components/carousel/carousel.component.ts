@@ -16,14 +16,14 @@ export class CarouselComponent {
       link: null
     },
     {
-      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/examen_larq8q.jpg',
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/entrenamiento_oq5evd.jpg',
       alt: 'Competencias y exámenes',
       title: 'Vive nuevas experiencias',
-      text: 'Conéctate con deportistas y participa en competencias reconocidas',
+      text: 'Conéctate con deportistas y participa en torneos, campamentos y actividades vacacionales únicas',
       link: null
     },
     {
-      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/bogota_f5r2ma.jpg',
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/bog_lmoyxl.jpg',
       alt: 'Sede Bogotá',
       title: 'Sede Bogotá',
       text: 'Contamos con dos sedes en la capital. ¡Únete a esta gran familia!',
@@ -44,17 +44,10 @@ export class CarouselComponent {
       link: null
     },
     {
-      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/Ecole_bv7w0j.jpg',
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/villa_a0jwpf.jpg',
       alt: 'Alianzas con colegios en Villavicencio',
       title: 'Alianza educativa',
       text: 'Con los colegios Espíritu Santo, Gimnasio Los Alcázares y José Antonio Páez en Villavicencio',
-      link: null
-    },
-    {
-      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/combate_oc2aw3.jpg',
-      alt: 'Eventos deportivos y vacacionales',
-      title: 'Eventos deportivos',
-      text: 'Participa en torneos, campamentos y actividades vacacionales únicas',
       link: null
     }
   ];
