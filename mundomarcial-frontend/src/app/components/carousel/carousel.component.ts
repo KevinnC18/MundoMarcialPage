@@ -33,7 +33,7 @@ export class CarouselComponent {
       img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/grupo_qjjhup.jpg',
       alt: 'Sede Villavicencio',
       title: 'Sede Villavicencio',
-      text: 'También contamos con una sede en Villavicencio. ¡Haz parte de nuestra comunidad!',
+      text: 'También contamos con una sede en Villavicencio. ¡Haz parte de nuestra familia!',
       link: 'https://forms.gle/c46M68DiR9FAGtkQA'
     },
     {
