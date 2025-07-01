@@ -141,6 +141,7 @@
 
   .about-container {
     margin: 1rem; 
+    padding: 0;
   }
 
   .map-container {
@@ -189,6 +190,7 @@
     gap: 1rem; 
     margin-top: 0; 
     padding: 0;
+    margin-bottom: 0;
   }
   .about-text {
     margin: 0; // Eliminar márgenes adicionales
@@ -196,6 +198,7 @@
   }
   .about-description {
     text-align: justify; 
+    padding: 0;
   }
   .about-locations {
     margin-top: 0.5rem;
