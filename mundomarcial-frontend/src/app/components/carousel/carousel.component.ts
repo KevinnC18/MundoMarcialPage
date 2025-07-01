@@ -44,10 +44,10 @@ export class CarouselComponent {
       link: null
     },
     {
-      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/villa_a0jwpf.jpg',
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/centauro_fi9tup.jpg',
       alt: 'Alianzas con colegios en Villavicencio',
       title: 'Alianza educativa',
-      text: 'Con los colegios Espíritu Santo, Gimnasio Los Alcázares y José Antonio Páez en Villavicencio',
+      text: 'Con los colegios Espíritu Santo, Gimnasio Los Alcázares, José Antonio Páez en Villavicencio y Escuela de Vigilancia El Centauro en Villavicencio',
       link: null
     }
   ];

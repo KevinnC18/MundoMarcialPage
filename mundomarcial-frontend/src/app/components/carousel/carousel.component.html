@@ -6,7 +6,7 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="carousel-caption">
-      <div [ngClass]="(i === 0 || i === 4) ? 'hero-content-bottom' : 'hero-content'">
+      <div [ngClass]="(i === 0 || i === 4 || i === 5) ? 'hero-content-bottom' : 'hero-content'">
         <h2>{{ slide.title }}</h2>
         <p>{{ slide.text }}</p>
         <a *ngIf="slide.link" [href]="slide.link" target="_blank" class="btn btn-outline-light btn-lg rounded-pill">Inscríbete →</a>
