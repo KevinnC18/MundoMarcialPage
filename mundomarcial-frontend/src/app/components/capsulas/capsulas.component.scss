@@ -4,7 +4,7 @@
 /* Sección principal  */
 .capsule-list-section {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: var(--color-bg);
 }
 
 /* Encabezado de la sección */
@@ -28,7 +28,6 @@
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
-  cursor: pointer;
   height: 430px; 
 }
 
@@ -43,7 +42,7 @@
 
 .capsule-details {
   margin-top: 0.7rem;
-  padding: 0.7rem;
+  padding: 0.3rem;
   background-color: #ececec;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -86,6 +85,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .btn-more-info:hover {
@@ -93,7 +93,7 @@
 }
 
 .btn-more-info i {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -103,7 +103,7 @@
   }
   .capsule-card {
     height: auto; // Ajustar altura automáticamente
-    padding: 1rem; // Reducir padding
+    padding: 0.5rem; // Reducir padding
   }
   .capsule-image {
     height: 200px; // Reducir altura de imagen
@@ -117,7 +117,7 @@
   }
   .capsule-details {
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 0.4rem;
     background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);

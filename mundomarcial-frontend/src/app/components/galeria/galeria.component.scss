@@ -15,7 +15,7 @@ img {
     width: 100%; /* Asegura que ocupe todo el ancho */
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
     grid-template-columns: repeat(3, 1fr); /* 4 columnas por defecto */
-    border-bottom: 2px solid #9b9b9b; /* Línea divisora inferior */
+    border-bottom: 2px solid var(--color-border); /* Línea divisora inferior */
     padding-bottom: 1rem; /* Espacio debajo de la imagen */
 }
 
@@ -32,7 +32,7 @@ img {
     font-size: 1.8rem;
     font-weight: bold;
     margin: 1.5rem 0;
-    color: #555; 
+    color: var(--color-bg-dark); 
     text-align: center;
 }
 
@@ -42,6 +42,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: box-shadow 0.3s ease;
 }
 
 .gallery-item img {
@@ -50,6 +51,11 @@ img {
     object-fit: cover; /* Ajusta la imagen para que se recorte y mantenga proporciones */
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item:hover {
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(29, 29, 29, 0.18), 0 2px 8px rgba(44,44,44,0.12);
 }
 
 /* Media query para pantallas de 768px o menos */

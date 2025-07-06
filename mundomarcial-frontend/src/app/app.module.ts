@@ -18,6 +18,7 @@ import { InstructoresComponent } from './components/instructores/instructores.co
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
 import { HorariosComponent } from './components/horarios/horarios.component';
+import { EventosComponent } from './components/eventos/eventos.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CapsulasComponent,
     GaleriaComponent,
     HorariosComponent,
-    NavbarComponent 
+    NavbarComponent,
+    EventosComponent 
   ],
   imports: [
     BrowserModule,

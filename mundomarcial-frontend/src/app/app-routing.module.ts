@@ -5,6 +5,7 @@ import { InstructoresComponent } from './components/instructores/instructores.co
 import { HorariosComponent } from './components/horarios/horarios.component';
 import { CapsulasComponent } from './components/capsulas/capsulas.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
+import { EventosComponent } from './components/eventos/eventos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -12,7 +13,9 @@ const routes: Routes = [
   { path: 'instructores', component: InstructoresComponent },
   { path: 'capsulas', component: CapsulasComponent },
   { path: 'galeria', component: GaleriaComponent },
-  { path: 'horarios', component: HorariosComponent }
+  { path: 'horarios', component: HorariosComponent },
+  { path: 'eventos', component: EventosComponent }
+
 ];
 
 @NgModule({
