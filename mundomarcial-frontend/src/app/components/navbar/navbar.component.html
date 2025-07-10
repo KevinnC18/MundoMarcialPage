@@ -10,8 +10,8 @@
     </a>
 
     <!-- Botón del menú móvil -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
-      <span class="navbar-toggler-icon" [class.rotate]="menuOpen"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" [class.animated]="menuOpen"></span>
     </button>
 
     <!-- Contenidos del menu-->
@@ -20,21 +20,14 @@
         <!-- Inicio -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/inicio" routerLinkActive="active">
-            <i class="fas fa-home"></i> Inicio
+            <i class="fas fa-house"></i> Inicio
           </a>
         </li>
 
         <!--Instructores-->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/instructores" routerLinkActive="active">
-            <i class="fas fa-people-group"></i> Instructores
-          </a>
-        </li>
-
-        <!--Horarios-->
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/horarios" routerLinkActive="active">
-            <i class="fas fa-clock"></i> Horarios
+          <a class="nav-link" routerLink="/academia" routerLinkActive="active">
+            <i class="fas fa-vihara"></i> Academia
           </a>
         </li>
 

@@ -49,5 +49,19 @@ body {
   cursor: default !important;
 }
 
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c70707;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

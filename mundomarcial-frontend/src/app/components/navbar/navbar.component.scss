@@ -127,8 +127,9 @@ span {
   border-radius: 0.2rem;
 }
 
-.navbar-toggler-icon.rotate {
-  transform: rotate(90deg);
+.navbar-toggler-icon.animated {
+  transition: transform 0.4s;
+  transform: rotate(90deg) scale(1.2);
 }
 
 

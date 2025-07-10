@@ -1,21 +1,30 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit {
   isScrolled = false;
   isMobile = false;
-  menuOpen = false;
 
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
+  menuOpen = false;
 
   constructor() {
     this.checkScreenSize();
+  }
+  ngAfterViewInit(): void {
+    // Sincroniza el estado del menú con los eventos de Bootstrap
+    const navbarCollapse = document.getElementById('navbarSupportedContent');
+    if (navbarCollapse) {
+      navbarCollapse.addEventListener('show.bs.collapse', () => {
+        this.menuOpen = true;
+      });
+      navbarCollapse.addEventListener('hide.bs.collapse', () => {
+        this.menuOpen = false;
+      });
+    }
   }
 
   @HostListener('window:resize', [])

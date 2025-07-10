@@ -14,25 +14,23 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CapsulasComponent } from './components/capsulas/capsulas.component';
 import { AboutComponent } from './components/about/about.component';
-import { InstructoresComponent } from './components/instructores/instructores.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
-import { HorariosComponent } from './components/horarios/horarios.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AcademiaComponent } from './components/academia/academia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
     AboutComponent,
-    InstructoresComponent,
     FooterComponent,
     CapsulasComponent,
     GaleriaComponent,
-    HorariosComponent,
     NavbarComponent,
-    EventosComponent 
+    EventosComponent,
+    AcademiaComponent 
   ],
   imports: [
     BrowserModule,
