@@ -15,17 +15,14 @@ export class NavbarComponent implements AfterViewInit {
     this.checkScreenSize();
   }
   ngAfterViewInit(): void {
-    // Sincroniza el estado del menú con los eventos de Bootstrap
     const navbarCollapse = document.getElementById('navbarSupportedContent');
     if (navbarCollapse) {
       navbarCollapse.addEventListener('show.bs.collapse', () => {
         this.menuOpen = true;
       });
       navbarCollapse.addEventListener('hide.bs.collapse', () => {
-      setTimeout(() => {
         this.menuOpen = false;
-      }, 400); 
-    });
+      });
     }
   }
 
