@@ -3,7 +3,13 @@
     <div class="capsule-grid">
 
       <!-- Tarjeta 1 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 1}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 1,
+          'blurred': hoveredCard !== null && hoveredCard !== 1}"
+        (mouseenter)="setHoveredCard(1)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/poster_wt5nqw.jpg" class="capsule-image" alt="¿Qué es el taekwondo?">
         <div class="capsule-info">
           <h5 class="capsule-name">¿Qué es el taekwondo?</h5>
@@ -17,8 +23,14 @@
         </div>
       </div>
 
-      <!-- Tarjeta 1 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 2}">
+      <!-- Tarjeta 2 -->
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 2,
+          'blurred': hoveredCard !== null && hoveredCard !== 2}"
+        (mouseenter)="setHoveredCard(2)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/equipo_ryhced.jpg" class="capsule-image" alt="¿Quiénes pueden practicarlo?">
         <div class="capsule-info">
           <h5 class="capsule-name">¿Quiénes pueden practicarlo?</h5>
@@ -32,7 +44,13 @@
       </div>
 
       <!-- Tarjeta 3 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 3}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 3,
+          'blurred': hoveredCard !== null && hoveredCard !== 3}"
+        (mouseenter)="setHoveredCard(3)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/bandera_fqjbx0.jpg" class="capsule-image" alt="Historia del taekwondo">
         <div class="capsule-info">
           <h5 class="capsule-name">Historia del taekwondo</h5>
@@ -47,7 +65,13 @@
       </div>
 
       <!-- Tarjeta 4 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 4}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 4,
+          'blurred': hoveredCard !== null && hoveredCard !== 4}"
+        (mouseenter)="setHoveredCard(4)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/Col_qwgdld.webp" class="capsule-image" alt="Historia del taekwondo en Colombia">
         <div class="capsule-info">
           <h5 class="capsule-name">Historia del taekwondo en Colombia</h5>
@@ -65,7 +89,13 @@
       </div>
 
       <!-- Tarjeta 5 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 5}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 5,
+          'blurred': hoveredCard !== null && hoveredCard !== 5}"
+        (mouseenter)="setHoveredCard(5)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/calentamiento_zaxzld.jpg" class="capsule-image" alt="¿Por qué entrenar taekwondo?">
         <div class="capsule-info">
           <h5 class="capsule-name">¿Por qué entrenar taekwondo?</h5>
@@ -79,7 +109,13 @@
       </div>
 
       <!-- Tarjeta 6 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 6}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 6,
+          'blurred': hoveredCard !== null && hoveredCard !== 6}"
+        (mouseenter)="setHoveredCard(6)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/entrenamiento_oq5evd.jpg" class="capsule-image" alt="Beneficios del entrenamiento">
         <div class="capsule-info">
           <h5 class="capsule-name">Beneficios del entrenamiento</h5>
@@ -93,7 +129,13 @@
       </div>
 
       <!-- Tarjeta 7 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 7}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 7,
+          'blurred': hoveredCard !== null && hoveredCard !== 7}"
+        (mouseenter)="setHoveredCard(7)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/coach_eo2v5r.jpg" class="capsule-image" alt="Objetivos del entrenamiento">
         <div class="capsule-info">
           <h5 class="capsule-name">Objetivos del entrenamiento</h5>
@@ -114,7 +156,13 @@
       </div>
 
       <!-- Tarjeta 8 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 8}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 8,
+          'blurred': hoveredCard !== null && hoveredCard !== 8}"
+        (mouseenter)="setHoveredCard(8)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/entrenar_iydenz.jpg" class="capsule-image" alt="Importancia de entrenar en grupo">
         <div class="capsule-info">
           <h5 class="capsule-name">Importancia de entrenar en grupo</h5>
@@ -129,7 +177,13 @@
       </div>
 
       <!-- Tarjeta 9 -->
-      <div class="capsule-card" [ngClass]="{'expanded': activeCard === 9}">
+      <div
+        class="capsule-card"
+        [ngClass]="{
+          'expanded': activeCard === 9,
+          'blurred': hoveredCard !== null && hoveredCard !== 9}"
+        (mouseenter)="setHoveredCard(9)"
+        (mouseleave)="setHoveredCard(null)">
         <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/leon_q3fdlj.png" class="capsule-image" alt="¿Por qué elegir Mundo Marcial?">
         <div class="capsule-info">
           <h5 class="capsule-name">¿Por qué elegir Mundo Marcial?</h5>

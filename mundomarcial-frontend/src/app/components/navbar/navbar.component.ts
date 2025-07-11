@@ -22,8 +22,10 @@ export class NavbarComponent implements AfterViewInit {
         this.menuOpen = true;
       });
       navbarCollapse.addEventListener('hide.bs.collapse', () => {
+      setTimeout(() => {
         this.menuOpen = false;
-      });
+      }, 400); 
+    });
     }
   }
 

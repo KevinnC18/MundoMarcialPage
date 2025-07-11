@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./capsulas.component.scss']
 })
 export class CapsulasComponent {
-  
   activeCard: number | null = null;
+  hoveredCard: number | null = null; // <-- NUEVO
 
   toggleCard(cardId: number): void {
     this.activeCard = this.activeCard === cardId ? null : cardId;
+  }
+
+  setHoveredCard(cardId: number | null): void {
+    this.hoveredCard = cardId;
   }
 }

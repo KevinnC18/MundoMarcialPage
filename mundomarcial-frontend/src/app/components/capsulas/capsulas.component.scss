@@ -27,7 +27,7 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease, filter 0.3s;
   height: 430px; 
 }
 
@@ -38,6 +38,12 @@
 .capsule-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.capsule-card.blurred {
+  filter: blur(3px);
+  pointer-events: none;
+  transition: filter 0.5s;
 }
 
 .capsule-details {

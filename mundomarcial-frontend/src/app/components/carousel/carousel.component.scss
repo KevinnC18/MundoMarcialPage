@@ -130,13 +130,14 @@ img {
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
-  opacity: 0.1;
+  opacity: 0;
   transition: opacity 0.3s ease !important;
 }
 
 .carousel-section:hover .carousel-control-prev,
 .carousel-section:hover .carousel-control-next {
   opacity: 1;
+  transition: opacity 0.3s ease !important;
 }
 
 .carousel-item.active,
