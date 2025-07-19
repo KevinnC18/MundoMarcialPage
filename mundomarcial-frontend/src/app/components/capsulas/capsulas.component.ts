@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CapsulasComponent {
   activeCard: number | null = null;
-  hoveredCard: number | null = null; // <-- NUEVO
+  hoveredCard: number | null = null;
 
   toggleCard(cardId: number): void {
     this.activeCard = this.activeCard === cardId ? null : cardId;
