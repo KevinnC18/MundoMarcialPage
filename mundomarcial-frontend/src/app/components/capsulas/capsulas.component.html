@@ -31,14 +31,15 @@
           'blurred': hoveredCard !== null && hoveredCard !== 2}"
         (mouseenter)="setHoveredCard(2)"
         (mouseleave)="setHoveredCard(null)">
-        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/equipo_ryhced.jpg" class="capsule-image" alt="¿Quiénes pueden practicarlo?">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/bandera_fqjbx0.jpg" class="capsule-image" alt="Historia del taekwondo">
         <div class="capsule-info">
-          <h5 class="capsule-name">¿Quiénes pueden practicarlo?</h5>
+          <h5 class="capsule-name">Historia del taekwondo</h5>
           <button class="btn-more-info" (click)="toggleCard(2)">
-            <i class="fas fa-universal-access"></i> Anímate
+            <i class="fas fa-feather"></i> Aprende
           </button>
           <div class="capsule-details" *ngIf="activeCard === 2">
-            <p>Este noble deporte puede ser practicado por hombres, mujeres y niños, sin distinción de edad ni limitaciones. Algunos lo eligen por su enfoque deportivo y competitivo, mientras que otros encuentran en él una herramienta para fortalecer su personalidad y adoptarlo como una forma de vida.</p>
+            <p>Según la tradición coreana, los orígenes del Taekwondo se remontan al año 50 a.C., con la práctica de un antiguo arte marcial llamado Taekkyon. Oficialmente, el Taekwondo fue fundado el 11 de abril de 1955 en Seúl, Corea del Sur, por el general Choi Hong Hi. <br> En 1973, se fundó la World Taekwondo Federation (actualmente conocida como World Taekwondo - WT) en Corea del Sur, con el objetivo de unificar y organizar esta disciplina a nivel internacional. <br>
+            El Taekwondo hizo su primera aparición como deporte de exhibición en los Juegos Olímpicos de Seúl 1988. En este evento participaron 183 atletas (120 hombres y 63 mujeres) de 34 países, compitiendo en 8 divisiones de peso, tanto masculinas como femeninas. Finalmente, el Taekwondo fue reconocido como deporte olímpico oficial en los Juegos Olímpicos de Sídney 2000.</p>
           </div>
         </div>
       </div>
@@ -51,15 +52,18 @@
           'blurred': hoveredCard !== null && hoveredCard !== 3}"
         (mouseenter)="setHoveredCard(3)"
         (mouseleave)="setHoveredCard(null)">
-        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/bandera_fqjbx0.jpg" class="capsule-image" alt="Historia del taekwondo">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/Col_qwgdld.webp" class="capsule-image" alt="Historia del taekwondo en Colombia">
         <div class="capsule-info">
-          <h5 class="capsule-name">Historia del taekwondo</h5>
+          <h5 class="capsule-name">Historia del taekwondo en Colombia</h5>
           <button class="btn-more-info" (click)="toggleCard(3)">
-            <i class="fas fa-feather"></i> Aprende
+            <i class="fas fa-magnifying-glass"></i> Edúcate
           </button>
           <div class="capsule-details" *ngIf="activeCard === 3">
-            <p>Según la tradición coreana, los orígenes del Taekwondo se remontan al año 50 a.C., con la práctica de un antiguo arte marcial llamado Taekkyon. Oficialmente, el Taekwondo fue fundado el 11 de abril de 1955 en Seúl, Corea del Sur, por el general Choi Hong Hi. <br> En 1973, se fundó la World Taekwondo Federation (actualmente conocida como World Taekwondo - WT) en Corea del Sur, con el objetivo de unificar y organizar esta disciplina a nivel internacional. <br>
-            El Taekwondo hizo su primera aparición como deporte de exhibición en los Juegos Olímpicos de Seúl 1988. En este evento participaron 183 atletas (120 hombres y 63 mujeres) de 34 países, compitiendo en 8 divisiones de peso, tanto masculinas como femeninas. Finalmente, el Taekwondo fue reconocido como deporte olímpico oficial en los Juegos Olímpicos de Sídney 2000.</p>
+            <p>
+              El Taekwondo llegó a Colombia en 1964, y las primeras ciudades en practicarlo fueron Bogotá y Medellín, bajo la enseñanza del profesor coreano Sahn Young Han. En Medellín, su práctica se inició en 1966 con el profesor coreano Huan Su Sohn. Para el año 1967, el Taekwondo se institucionalizó y oficializó en Colombia, gracias a un convenio entre la Universidad de América, en Bogotá, y el gobierno de Corea, junto con la llegada al país del maestro Kyong Deuk Lee. <br>
+              En 1969, otro maestro coreano, Woo Young Lee conocido como "Carlos Lee" llegó al país, aportando al Taekwondo colombiano sus conocimientos y experiencia. <br>
+              La Federación Colombiana de Taekwondo fue fundada el 9 de diciembre de 1978 mediante una asamblea realizada por las ligas de Atlántico, Bolívar y Sucre, en la ciudad de Barranquilla. En 1979, fue reconocida oficialmente por Coldeportes Nacional.
+          </p>
           </div>
         </div>
       </div>
@@ -72,18 +76,14 @@
           'blurred': hoveredCard !== null && hoveredCard !== 4}"
         (mouseenter)="setHoveredCard(4)"
         (mouseleave)="setHoveredCard(null)">
-        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/Col_qwgdld.webp" class="capsule-image" alt="Historia del taekwondo en Colombia">
+        <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/equipo_ryhced.jpg" class="capsule-image" alt="¿Quiénes pueden practicarlo?">
         <div class="capsule-info">
-          <h5 class="capsule-name">Historia del taekwondo en Colombia</h5>
+          <h5 class="capsule-name">¿Quiénes pueden practicarlo?</h5>
           <button class="btn-more-info" (click)="toggleCard(4)">
-            <i class="fas fa-magnifying-glass"></i> Edúcate
+            <i class="fas fa-universal-access"></i> Anímate
           </button>
           <div class="capsule-details" *ngIf="activeCard === 4">
-            <p>
-              El Taekwondo llegó a Colombia en 1964, y las primeras ciudades en practicarlo fueron Bogotá y Medellín, bajo la enseñanza del profesor coreano Sahn Young Han. En Medellín, su práctica se inició en 1966 con el profesor coreano Huan Su Sohn. Para el año 1967, el Taekwondo se institucionalizó y oficializó en Colombia, gracias a un convenio entre la Universidad de América, en Bogotá, y el gobierno de Corea, junto con la llegada al país del maestro Kyong Deuk Lee. <br>
-              En 1969, otro maestro coreano, Woo Young Lee conocido como "Carlos Lee" llegó al país, aportando al Taekwondo colombiano sus conocimientos y experiencia. <br>
-              La Federación Colombiana de Taekwondo fue fundada el 9 de diciembre de 1978 mediante una asamblea realizada por las ligas de Atlántico, Bolívar y Sucre, en la ciudad de Barranquilla. En 1979, fue reconocida oficialmente por Coldeportes Nacional.
-          </p>
+            <p>Este noble deporte puede ser practicado por hombres, mujeres y niños, sin distinción de edad ni limitaciones. Algunos lo eligen por su enfoque deportivo y competitivo, mientras que otros encuentran en él una herramienta para fortalecer su personalidad y adoptarlo como una forma de vida.</p>
           </div>
         </div>
       </div>
