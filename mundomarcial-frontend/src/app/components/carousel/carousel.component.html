@@ -2,7 +2,23 @@
 <ngb-carousel [interval]="6000" [wrap]="true" [keyboard]="true" [pauseOnHover]="true">
   <ng-template ngbSlide *ngFor="let slide of slides; let i = index">
     <div class="carousel-img-wrapper">
-      <img [src]="slide.img" class="carousel-img" [alt]="slide.alt" draggable="false">
+      <picture>
+        <!-- Imagen para móviles -->
+        <source media="(max-width: 768px)" 
+                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_800/')" 
+                type="image/jpeg">
+        <!-- Imagen para tablets -->
+        <source media="(max-width: 1024px)" 
+                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_1200/')" 
+                type="image/jpeg">
+        <!-- Imagen para desktop -->
+        <img [src]="slide.img" 
+             class="carousel-img" 
+             [alt]="slide.alt" 
+             draggable="false"
+             loading="lazy"
+             decoding="async">
+      </picture>
       <div class="hero-overlay"></div>
     </div>
     <div class="carousel-caption">

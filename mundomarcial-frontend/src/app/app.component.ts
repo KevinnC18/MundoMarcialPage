@@ -18,6 +18,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class AppComponent {
   title = 'mundomarcial-frontend';
 
+  // Al cambiar de ruta, se desplaza al inicio de la página
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { AcademiaComponent } from './components/academia/academia.component';
 import { CapsulasComponent } from './components/capsulas/capsulas.component';
@@ -13,11 +13,13 @@ const routes: Routes = [
   { path: 'capsulas', component: CapsulasComponent },
   { path: 'galeria', component: GaleriaComponent },
   { path: 'eventos', component: EventosComponent }
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
