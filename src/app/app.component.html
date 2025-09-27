@@ -1,0 +1,12 @@
+<nav>
+  <app-navbar></app-navbar>
+</nav>
+<main class="main">
+    <app-carousel></app-carousel>
+    <div [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig?.path" class="route-anim-container">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+</main>
+<footer>
+  <app-footer></app-footer>
+</footer>

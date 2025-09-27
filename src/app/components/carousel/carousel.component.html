@@ -1,0 +1,32 @@
+<!-- Carrusel de imágenes con contenido superpuesto -->
+<ngb-carousel [interval]="6000" [wrap]="true" [keyboard]="true" [pauseOnHover]="true">
+  <ng-template ngbSlide *ngFor="let slide of slides; let i = index">
+    <div class="carousel-img-wrapper">
+      <picture>
+        <!-- Imagen para móviles -->
+        <source media="(max-width: 768px)" 
+                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_800/')" 
+                type="image/jpeg">
+        <!-- Imagen para tablets -->
+        <source media="(max-width: 1024px)" 
+                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_1200/')" 
+                type="image/jpeg">
+        <!-- Imagen para desktop -->
+        <img [src]="slide.img" 
+             class="carousel-img" 
+             [alt]="slide.alt" 
+             draggable="false"
+             loading="lazy"
+             decoding="async">
+      </picture>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="carousel-caption">
+      <div [ngClass]="(i === 0 || i === 4 || i === 5) ? 'hero-content-bottom' : 'hero-content'">
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.text }}</p>
+        <a *ngIf="slide.link" [href]="slide.link" target="_blank" class="btn btn-outline-light btn-lg rounded-pill">Inscríbete →</a>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
