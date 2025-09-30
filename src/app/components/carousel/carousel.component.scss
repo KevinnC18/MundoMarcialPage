@@ -126,7 +126,7 @@ ngb-carousel {
 
   .carousel-control-prev,
   .carousel-control-next {
-    width: 50px;
+    width: 100%;
     opacity: 0;
     transition: opacity 0.3s ease !important;
   }
@@ -139,9 +139,9 @@ ngb-carousel {
     margin: 0; 
     
     .carousel-img {
-      aspect-ratio: 16 / 9; // Proporción panorámica, ideal para cabeceras
+      aspect-ratio: 16 / 9;
       height: auto !important; 
-      max-height: 500px; // Altura máxima para tablets
+      max-height: 500px;
     }
 
     h2 { font-size: 1.8rem; margin-bottom: 1rem; }
@@ -151,7 +151,7 @@ ngb-carousel {
 
   @media (max-width: 480px) {
     .carousel-img {
-      aspect-ratio: 4 / 3; // Una proporción más cuadrada para pantallas verticales
+      aspect-ratio: 4 / 3; // Proporción cuadrada para dispositivos móviles
       max-height: 450px;
     }
 
@@ -167,6 +167,6 @@ ngb-carousel {
 
 .carousel-section {
   position: relative;
-  min-height: 600px; // Altura mínima para la sección
+  min-height: 600px;
   overflow: hidden;
 }
