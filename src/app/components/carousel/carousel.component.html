@@ -5,11 +5,11 @@
       <picture>
         <!-- Imagen para móviles -->
         <source media="(max-width: 768px)" 
-                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_800/')" 
+                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_800,h_600,c_fill/')" 
                 type="image/jpeg">
         <!-- Imagen para tablets -->
         <source media="(max-width: 1024px)" 
-                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_1200/')" 
+                [srcset]="slide.img.replace('/f_auto,q_auto/', '/f_auto,q_auto,w_1200,h_700,c_fill/')" 
                 type="image/jpeg">
         <!-- Imagen para desktop -->
         <img [src]="slide.img" 

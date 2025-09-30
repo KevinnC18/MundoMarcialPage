@@ -1,11 +1,12 @@
+// Estilos base para imágenes (Estos se mantienen igual)
 img {
-    width: 100%;
-    height: 100%;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .carousel-img {
@@ -13,268 +14,159 @@ img {
   min-height: 400px;
   object-fit: cover;
   filter: brightness(50%);
-}
+  }
 
-.carousel {
-  margin-top: 2rem;
+ngb-carousel {
+  display: block; 
   position: relative;
-  height: 100vh;
-  max-height: 700px;
   overflow: hidden;
+  margin-top: 2rem;
+
+  @media (min-width: 1025px) {
+    max-height: 700px;
+  }
+
+  .carousel-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  // Estilo de la imagen del carrusel
+  .carousel-img {
+    object-fit: cover;
+    filter: brightness(50%);
+    display: block; 
+  }
+  
+  // Capa de superposición oscura
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 15px !important; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px; // Borde redondeado completo
+
+    button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      background: transparent;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 90%; // Evita que el texto toque los bordes en pantallas pequeñas
+  }
+
+  .hero-content-bottom {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; 
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+
+  // Tipografía y botones 
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .btn-outline-light {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-width: 2px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease !important;
+  }
+  &:hover .carousel-control-prev,
+  &:hover .carousel-control-next {
+    opacity: 1;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0; 
+    
+    .carousel-img {
+      aspect-ratio: 16 / 9; // Proporción panorámica, ideal para cabeceras
+      height: auto !important; 
+      max-height: 500px; // Altura máxima para tablets
+    }
+
+    h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+    p { font-size: 1rem; margin-bottom: 1.5rem; }
+    .btn-outline-light { padding: 0.6rem 1.5rem; font-size: 0.8rem; }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-img {
+      aspect-ratio: 4 / 3; // Una proporción más cuadrada para pantallas verticales
+      max-height: 450px;
+    }
+
+    h2 { font-size: 1.3rem; }
+    p { font-size: 0.8rem; }
+    .btn-outline-light { padding: 0.5rem 1.2rem; font-size: 0.7rem; }
+
+    .hero-content-bottom {
+      bottom: 10%
+    }
+  }
 }
 
 .carousel-section {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 600px; // Altura mínima para la sección
   overflow: hidden;
-}
-
-.carousel-item {
-  position: relative;
-  height: 100vh;
-  min-height: 400px;
-  aspect-ratio: 16 / 9;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  position: relative !important;
-  display: none !important;
-  float: left !important;
-  width: 100% !important;
-  margin-right: -100% !important;
-  backface-visibility: hidden !important;
-}
-
-.carousel-item img {
-  height: 100%;
-  filter: brightness(50%);
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  text-align: center;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-content-bottom {
-  position: absolute;
-  bottom: 25%; 
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  text-align: center;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  width: 100%;
-}
-
-.carousel-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.carousel-caption h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.carousel-caption p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.btn-outline-light {
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-width: 2px;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-  opacity: 0;
-  transition: opacity 0.3s ease !important;
-}
-
-.carousel-section:hover .carousel-control-prev,
-.carousel-section:hover .carousel-control-next {
-  opacity: 1;
-  transition: opacity 0.3s ease !important;
-}
-
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
-  display: block !important;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.carousel-item-next:not(.carousel-item-start),
-.active.carousel-item-end {
-  transform: translateX(100%) !important;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.carousel-inner {
-  position: relative !important;
-  width: 100% !important;
-  overflow: hidden !important;
-}
-
-@media (max-width: 992px) {
-  .carousel {
-    margin-top: 0;
-    height: 100%;
-    min-height: 450px;
-    max-height: 500px;
-  }
-
-  .carousel-item {
-    width: 100%; 
-  }
-
-  .carousel-item img {
-    width: 100%;
-    height: 300px !important;
-    object-fit: cover;
-  }
-
-  .carousel-caption {
-    top: 10%; 
-    transform: translate(-50%, 0); 
-  }
-
-  .hero-content-bottom {
-    bottom: 10%;
-    transform: translate(-50%, 0);
-  }
-
-
-  .carousel-caption h2 {
-    font-size: 1rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.6rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .btn-outline-light {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel {
-    margin-top: 0;
-    height: 100%;
-  }
-
-  .carousel-item {
-    height: 100vh;
-    width: 100%; 
-  }
-
-  .carousel-item img {
-    height: 100%;
-    width: 100%; 
-    object-fit: cover; 
-  }
-
-  .carousel-caption {
-    top: 2%; 
-    transform: translate(-50%, 0); 
-  }
-
-  .hero-content-bottom {
-    bottom: 10%;
-    transform: translate(-50%, 0);
-  }
-
-
-  .carousel-caption h2 {
-    font-size: 1.4rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.8rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .btn-outline-light {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel {
-    margin-top: 0;
-    height: 100%;
-  }
-
-  .carousel-item {
-    height: 100%;
-    width: 100%; 
-  }
-
-  .carousel-item img {
-    height: 100%;
-    width: 100%; 
-    object-fit: cover; 
-  }
-
-  .carousel-caption {
-    top: 2%; 
-    transform: translate(-50%, 0); 
-  }
-
-  .hero-content-bottom {
-    bottom: 10%;
-    transform: translate(-50%, 0);
-  }
-
-
-  .carousel-caption h2 {
-    font-size: 1rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.6rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .btn-outline-light {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.5rem;
-  }
 }
