@@ -32,6 +32,7 @@ p {
   color: var(--color-primary);
 }
 
+/* Estilos para la seccion de ubicaciones */ 
 .about-locations {
   display: flex;
   gap: 2rem;
@@ -119,7 +120,7 @@ p {
   }
 }
 
-// Estilos para la seccion de instructores
+/* Estilos para la seccion de instructores */ 
 .table-instructores {
   margin: 1rem auto;
   width: 85%;
@@ -154,25 +155,25 @@ p {
   }
 
   .table-instructores thead {
-    display: none; /* Oculta los encabezados */
+    display: none;
   }
 
   .table-instructores th, .table-instructores td {
-    font-size: 1rem; /* Ajusta el tamaño de fuente para mejor legibilidad */
+    font-size: 1rem; 
     padding: 0.5rem;
     display: block;
     text-align: left;
     width: 223%; 
-    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    box-sizing: border-box; 
   }
 
   .table-instructores td {
     position: relative;
-    padding-left: 5rem; /* Espacio para el encabezado */
+    padding-left: 5rem;
   }
 
   .table-instructores td::before {
-    content: attr(data-label); /* Muestra el encabezado como texto antes del contenido */
+    content: attr(data-label);
     position: absolute;
     left: 0;
     top: 0;
@@ -182,7 +183,7 @@ p {
 
   .table-instructores img {
     max-height: 300px;
-    max-width: 100%; /* Ajusta las imágenes al ancho completo */
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -190,7 +191,7 @@ p {
 }
 
 
-// Estilos para la sección de horarios
+/* Estilos para la seccion de horarios */ 
 .horarios-container {
   display: flex;
   flex-wrap: wrap;

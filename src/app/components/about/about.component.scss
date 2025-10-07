@@ -118,19 +118,11 @@
 /* Responsividad para pantallas medianas */
 @media (max-width: 900px) {
   .about-section {
-    padding: 2rem 0; /* Reduce el padding superior e inferior */
+    padding: 2rem 0; 
   }
   .about-container {
     margin: 1rem; 
     padding: 0;
-  }
-  .map-container {
-    margin-top: 0; /* Elimina cualquier margen superior */
-    padding-top: 0; /* Elimina cualquier padding superior */
-  }
-  .about-text {
-    margin: 0; // Eliminar márgenes adicionales
-    padding: 0; // Eliminar padding adicional
   }
   .about-text, .about-image {
     justify-content: center;
@@ -153,10 +145,6 @@
     margin-top: 0; 
     padding: 0;
     margin-bottom: 0;
-  }
-  .about-text {
-    margin: 0; // Eliminar márgenes adicionales
-    padding: 0; // Eliminar padding adicional
   }
   .about-description {
     text-align: justify; 
