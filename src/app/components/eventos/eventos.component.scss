@@ -14,11 +14,11 @@
 }
 
 .event-list-container h2 {
-    font-size: 2.2rem;
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 /* Contenedor de las cápsulas */
@@ -51,6 +51,7 @@
   height: 420px;
   object-fit: cover;
   border-radius: 1rem; 
+  padding: 1rem;
 }
 
 /* Información textual */
@@ -58,10 +59,22 @@
   padding: 1.5rem;
   text-align: center;
   line-height: 2;
-}
 
-.event-info span {
-  color: var(--color-primary);
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .event-detail {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--color-secondary);
+    margin: 0.5rem 0;
+    
+    .fa-solid, .fa-regular {
+      color: var(--color-primary);
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 .event-name {
