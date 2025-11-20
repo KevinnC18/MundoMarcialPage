@@ -48,10 +48,10 @@
 /* Imagen */
 .event-image {
   width: 100%;
-  height: 420px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 1rem; 
   padding: 1rem;
+  aspect-ratio: 4 / 3;
 }
 
 /* Información textual */
@@ -90,12 +90,12 @@
     gap: 1rem; // Reducir espacio entre tarjetas
   }
   .event-card {
-    height: auto; // Ajustar altura automáticamente
+    height: auto; 
     padding: 0.5rem; // Reducir padding
   }
   .event-image {
     height: 250px; // Reducir altura de imagen
-    object-fit: cover; // Ajustar imagen al contenedor
+    object-fit: cover; 
   }
   .event-name {
     font-size: 1.2rem; // Reducir tamaño de texto
