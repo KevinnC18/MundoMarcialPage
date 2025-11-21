@@ -20,24 +20,24 @@ Este proyecto está construido con:
 mundomarcial-frontend/
 ├── src/
 │   ├── app/
-│   │   ├── components/         # Componentes de la aplicación
-│   │   │   ├── about/          # Componente de inicio/acerca de
-│   │   │   ├── academia/       # Información sobre la academia
-│   │   │   ├── capsulas/       # Cápsulas educativas
-│   │   │   ├── carousel/       # Carrusel de imágenes principal
-│   │   │   ├── eventos/        # Eventos y actividades
-│   │   │   ├── footer/         # Pie de página
-│   │   │   ├── galeria/        # Galería de imágenes
-│   │   │   └── navbar/         # Barra de navegación
-│   │   ├── app-routing.module.ts  # Configuración de rutas
-│   │   ├── app.component.ts    # Componente raíz
-│   │   └── app.module.ts       # Módulo principal
-│   ├── index.html              # HTML principal
-│   ├── main.ts                 # Punto de entrada
-│   └── styles.scss             # Estilos globales
-├── angular.json                # Configuración de Angular
-├── package.json                # Dependencias del proyecto
-└── tsconfig.json               # Configuración de TypeScript
+│   │   ├── components/           # Componentes de la aplicación
+│   │   │   ├── about/            # Componente de inicio/acerca de
+│   │   │   ├── academia/         # Información sobre la academia
+│   │   │   ├── capsulas/         # Cápsulas educativas
+│   │   │   ├── carousel/         # Carrusel de imágenes principal
+│   │   │   ├── eventos/          # Eventos y actividades
+│   │   │   ├── footer/           # Pie de página
+│   │   │   ├── galeria/          # Galería de imágenes
+│   │   │   └── navbar/           # Barra de navegación
+│   │   ├── app-routing.module.ts # Configuración de rutas
+│   │   ├── app.component.ts      # Componente raíz
+│   │   └── app.module.ts         # Módulo principal
+│   ├── index.html                # HTML principal
+│   ├── main.ts                   # Punto de entrada
+│   └── styles.scss               # Estilos globales
+├── angular.json                  # Configuración de Angular
+├── package.json                  # Dependencias del proyecto
+└── tsconfig.json                 # Configuración de TypeScript
 ```
 
 ## 🗺️ Rutas de la Aplicación
