@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class CarouselComponent {
   slides = [
     {
-      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/patada_nkjz42.jpg',
+      img: 'https://res.cloudinary.com/dz1vsm25f/image/upload/patada_ukatob.jpg',
       alt: 'Combate Taekwondo',
       title: 'Entrena con los mejores',
       text: 'En Mundo Marcial puedes encontrar los mejores instructores',

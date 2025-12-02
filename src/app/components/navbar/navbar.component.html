@@ -3,70 +3,68 @@
   <div class="container">
     <!-- Logo de marca-->
     <a class="navbar-brand d-flex align-items-center">
-      <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/logo_qvvtvi.png" alt="Logo de la marca" class="brand-logo me-2">
+      <img src="https://res.cloudinary.com/dz1vsm25f/image/upload/f_auto,q_auto/logo_qvvtvi.png" alt="Logo de la marca"
+        class="brand-logo me-2">
       <div class="brand-text">
         <h6 class="version-text">V1.0.0</h6>
       </div>
     </a>
 
     <!-- Botón del menú móvil -->
-    <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarSupportedContent" 
-      aria-controls="navbarSupportedContent" 
-      [attr.aria-expanded]="menuOpen"
-      aria-label="Toggle navigation"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation"
       (click)="toggleMenu()">
       <span class="navbar-toggler-icon" [class.animated]="menuOpen"></span>
     </button>
 
     <!-- Contenidos del menu-->
-    <div 
-      class="collapse navbar-collapse" 
-      id="navbarSupportedContent"
-      [class.show]="menuOpen">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.show]="menuOpen">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <!-- Inicio -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/inicio" routerLinkActive="active" (click)="isMobile && menuOpen ? closeMenu() : null">
+          <a class="nav-link" routerLink="/inicio" routerLinkActive="active"
+            (click)="isMobile && menuOpen ? closeMenu() : null">
             <i class="fas fa-house"></i> Inicio
           </a>
         </li>
 
         <!--Instructores-->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/academia" routerLinkActive="active" (click)="isMobile && menuOpen ? closeMenu() : null">
+          <a class="nav-link" routerLink="/academia" routerLinkActive="active"
+            (click)="isMobile && menuOpen ? closeMenu() : null">
             <i class="fas fa-vihara"></i> Academia
           </a>
         </li>
 
         <!--Capsulas informativas-->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/capsulas" routerLinkActive="active" (click)="isMobile && menuOpen ? closeMenu() : null">
+          <a class="nav-link" routerLink="/capsulas" routerLinkActive="active"
+            (click)="isMobile && menuOpen ? closeMenu() : null">
             <i class="fas fa-capsules"></i> Cápsulas Informativas
           </a>
         </li>
 
         <!-- Eventos -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/eventos" routerLinkActive="active" (click)="isMobile && menuOpen ? closeMenu() : null">
+          <a class="nav-link" routerLink="/eventos" routerLinkActive="active"
+            (click)="isMobile && menuOpen ? closeMenu() : null">
             <i class="fas fa-calendar-check"></i> Eventos
           </a>
         </li>
 
         <!-- Galeria -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/galeria" routerLinkActive="active" (click)="isMobile && menuOpen ? closeMenu() : null">
+          <a class="nav-link" routerLink="/galeria" routerLinkActive="active"
+            (click)="isMobile && menuOpen ? closeMenu() : null">
             <i class="fas fa-image"></i> Galería
           </a>
         </li>
 
         <!--Contacto-->
         <li class="nav-item">
-          <a class="nav-link" href="https://linktr.ee/MundoMarciall" target="_blank" (click)="isMobile && menuOpen ? closeMenu() : null">
-            <i class="fas fa-circle-info"></i> Contactanos
+          <a class="nav-link" href="https://linktr.ee/MundoMarciall" target="_blank"
+            (click)="isMobile && menuOpen ? closeMenu() : null">
+            <i class="fas fa-circle-info"></i> Contáctanos
           </a>
         </li>
       </ul>

@@ -1,19 +1,4 @@
-@import '@fortawesome/fontawesome-free/css/all.min.css';
-@import 'bootstrap/scss/bootstrap.scss';
-
-/* Sección principal  */
-.capsule-list-section {
-  padding: 2rem;
-  background: var(--color-bg);
-}
-
-/* Encabezado de la sección */
-.capsule-list-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.capsule-list-container h2 { 
+h2 {
   font-size: 2.2rem;
   color: var(--color-primary);
   text-align: center;
@@ -21,12 +6,9 @@
   font-weight: 700;
 }
 
-/* Contenedor de las cápsulas */
-.capsule-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
+.row {
+  margin-inline: 10rem;
+  margin-bottom: 2rem;
 }
 
 /* Tarjeta individual */
@@ -36,7 +18,7 @@
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease, filter 0.3s;
-  height: 430px; 
+  height: 420px;
 }
 
 .capsule-card.expanded {
@@ -49,20 +31,20 @@
 }
 
 .capsule-card.blurred {
-  filter: blur(2px);
+  filter: blur(1px);
   pointer-events: none;
   transition: filter 0.5s;
 }
 
 .capsule-details {
   margin-top: 0.7rem;
-  padding: 0.3rem;
+  padding: 0.4rem;
   background-color: #ececec;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   font-size: 0.9rem;
   color: #232323;
-  text-align: justify;
+  line-height: 1.5;
 }
 
 /* Imagen */
@@ -75,7 +57,6 @@
 /* Información textual */
 .capsule-info {
   padding: 1.5rem;
-  text-align: center;
 }
 
 .capsule-name {
@@ -83,6 +64,7 @@
   font-weight: 600;
   color: #232323;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 /* Botón para ver más información */
@@ -111,28 +93,33 @@
 }
 
 @media (max-width: 768px) {
-  .capsule-grid {
-    grid-template-columns: 1fr; // Mostrar una sola columna
-    gap: 1rem; // Reducir espacio entre tarjetas
-  }
+
   .capsule-card {
-    height: auto; // Ajustar altura automáticamente
-    padding: 0.5rem; 
+    height: auto;
+    padding: 0.2rem;
   }
+
   .capsule-image {
-    height: 200px; 
-    object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
   }
+
   .capsule-name {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
+
   .btn-more-info {
     font-size: 0.85rem;
   }
+
+  .row {
+    margin-inline: 3rem;
+    margin-bottom: 1rem;
+  }
+
   .capsule-details {
     margin-top: 1rem;
-    padding: 0.4rem;
-    background-color: #f8f9fa;
+    padding: 0.2rem;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     font-size: 0.8rem;

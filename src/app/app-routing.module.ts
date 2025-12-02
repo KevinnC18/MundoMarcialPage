@@ -1,24 +1,35 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { AcademiaComponent } from './components/academia/academia.component';
-import { CapsulasComponent } from './components/capsulas/capsulas.component';
-import { GaleriaComponent } from './components/galeria/galeria.component';
-import { EventosComponent } from './components/eventos/eventos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'inicio', component: AboutComponent },
-  { path: 'academia', component: AcademiaComponent },
-  { path: 'capsulas', component: CapsulasComponent },
-  { path: 'galeria', component: GaleriaComponent },
-  { path: 'eventos', component: EventosComponent }
+  {
+    path: 'academia',
+    loadComponent: () => import('./components/academia/academia.component').then(m => m.AcademiaComponent)
+  },
+  {
+    path: 'capsulas',
+    loadComponent: () => import('./components/capsulas/capsulas.component').then(m => m.CapsulasComponent)
+  },
+  {
+    path: 'galeria',
+    loadComponent: () => import('./components/galeria/galeria.component').then(m => m.GaleriaComponent)
+  },
+  {
+    path: 'eventos',
+    loadComponent: () => import('./components/eventos/eventos.component').then(m => m.EventosComponent)
+  },
+  {
+    path: '**',
+    loadComponent: () => import('./shared/components/not-found/not-found.component').then(m => m.NotFoundComponent)
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled',
-    preloadingStrategy: PreloadAllModules
+    scrollPositionRestoration: 'enabled'
   })],
   exports: [RouterModule]
 })

@@ -13,13 +13,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { CapsulasComponent } from './components/capsulas/capsulas.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AcademiaComponent } from './components/academia/academia.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +27,11 @@ import { AcademiaComponent } from './components/academia/academia.component';
     CarouselComponent,
     AboutComponent,
     FooterComponent,
-    CapsulasComponent,
     GaleriaComponent,
     NavbarComponent,
     EventosComponent,
-    AcademiaComponent 
+    AcademiaComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
