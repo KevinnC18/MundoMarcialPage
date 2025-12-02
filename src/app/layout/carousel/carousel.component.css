@@ -1,0 +1,126 @@
+img {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.carousel-img {
+  max-height: 900px;
+  min-height: 400px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+ngb-carousel {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+
+  @media (min-width: 1025px) {
+    max-height: 750px;
+  }
+
+  .carousel-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 90%;
+  }
+
+  .hero-content-bottom {
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+
+
+  @media (max-width: 1024px) {
+    margin: 0;
+
+    .carousel-img {
+      aspect-ratio: 16 / 9;
+      height: auto !important;
+      max-height: 500px;
+    }
+
+    :is(h2) {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    :is(p) {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-outline-light {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-img {
+      aspect-ratio: 4 / 3;
+      max-height: 450px;
+    }
+
+    :is(h2) {
+      font-size: 1rem;
+    }
+
+    :is(p) {
+      font-size: 0.6rem;
+    }
+
+    .btn-outline-light {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.6rem;
+    }
+
+    .carousel-caption {
+      top: 10%;
+    }
+
+    .hero-content-bottom {
+      bottom: 5% !important;
+    }
+  }
+}
+
+::ng-deep ngb-carousel .carousel-control-prev,
+::ng-deep ngb-carousel .carousel-control-next {
+  z-index: 3;
+}

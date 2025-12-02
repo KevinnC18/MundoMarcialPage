@@ -9,7 +9,6 @@ Este proyecto está construido con:
 - **Angular 16.2.12** - Framework principal
 - **TypeScript 5.1.3** - Lenguaje de programación
 - **Bootstrap 5.3.6** - Framework CSS para diseño responsive
-- **Angular Material 16.2.14** - Componentes UI de Material Design
 - **ng-bootstrap 15.1.2** - Componentes Bootstrap para Angular
 - **FontAwesome 6.7.2** - Iconografía
 - **RxJS 7.8.0** - Programación reactiva
@@ -20,66 +19,90 @@ Este proyecto está construido con:
 mundomarcial-frontend/
 ├── src/
 │   ├── app/
-│   │   ├── components/           # Componentes de la aplicación
-│   │   │   ├── about/            # Componente de inicio/acerca de
-│   │   │   ├── academia/         # Información sobre la academia
-│   │   │   ├── capsulas/         # Cápsulas educativas
-│   │   │   ├── carousel/         # Carrusel de imágenes principal
-│   │   │   ├── eventos/          # Eventos y actividades
-│   │   │   ├── footer/           # Pie de página
-│   │   │   ├── galeria/          # Galería de imágenes
-│   │   │   └── navbar/           # Barra de navegación
-│   │   ├── app-routing.module.ts # Configuración de rutas
-│   │   ├── app.component.ts      # Componente raíz
-│   │   └── app.module.ts         # Módulo principal
-│   ├── index.html                # HTML principal
-│   ├── main.ts                   # Punto de entrada
-│   └── styles.scss               # Estilos globales
-├── angular.json                  # Configuración de Angular
-├── package.json                  # Dependencias del proyecto
-└── tsconfig.json                 # Configuración de TypeScript
+│   │   ├── features/              # Módulos de características principales
+│   │   │   ├── about/             # Módulo de inicio/acerca de
+│   │   │   ├── academia/          # Módulo de información sobre la academia
+│   │   │   │   ├── components/    # Componentes hijos de academia
+│   │   │   │   │   ├── horarios/  # Componente de horarios
+│   │   │   │   │   ├── instructores/ # Componente de instructores
+│   │   │   │   │   └── ubicacion/ # Componente de ubicación
+│   │   │   │   └── pages/         # Páginas del módulo
+│   │   │   │       └── academia-page/ # Página principal de academia
+│   │   │   ├── capsulas/          # Cápsulas educativas
+│   │   │   ├── eventos/           # Módulo de eventos y actividades
+│   │   │   └── galeria/           # Módulo de galería de imágenes
+│   │   ├── layout/                # Componentes de diseño compartidos
+│   │   │   ├── carousel/          # Carrusel de imágenes principal
+│   │   │   ├── footer/            # Pie de página
+│   │   │   ├── navbar/            # Barra de navegación
+│   │   │   └── layout.module.ts   # Módulo de layout
+│   │   ├── shared/                # Componentes y utilidades compartidas
+│   │   │   └── components/        # Componentes compartidos
+│   │   │       ├── not-found/     # Componente de página no encontrada
+│   │   │       └── shared.module.ts # Módulo compartido
+│   │   ├── app-routing.module.ts  # Configuración de rutas
+│   │   ├── app.component.ts       # Componente raíz
+│   │   └── app.module.ts          # Módulo principal
+│   ├── index.html                 # HTML principal
+│   ├── main.ts                    # Punto de entrada
+│   └── styles.css                 # Estilos globales
+├── angular.json                   # Configuración de Angular
+├── package.json                   # Dependencias del proyecto
+└── tsconfig.json                  # Configuración de TypeScript
 ```
 
 ## 🗺️ Rutas de la Aplicación
 
-La aplicación incluye las siguientes rutas:
+La aplicación incluye las siguientes rutas con lazy loading:
 
-- `/` o `/inicio` - Página principal (AboutComponent)
-- `/academia` - Información sobre la academia (AcademiaComponent)
-- `/capsulas` - Cápsulas educativas (CapsulasComponent)
-- `/galeria` - Galería de imágenes (GaleriaComponent)
-- `/eventos` - Eventos y actividades (EventosComponent)
+- `/` - Redirige a `/inicio`
+- `/inicio` - Página principal (AboutComponent)
+- `/academia` - Información sobre la academia (AcademiaPageComponent) - *Lazy loaded*
+- `/capsulas` - Cápsulas educativas (CapsulasComponent) - *Lazy loaded*
+- `/galeria` - Galería de imágenes (GaleriaComponent) - *Lazy loaded*
+- `/eventos` - Eventos y actividades (EventosComponent) - *Lazy loaded*
+- `/**` - Página no encontrada (NotFoundComponent) - *Lazy loaded*
 
 ## 🎨 Características
 
 ### Componentes Principales
 
+#### Layout (Componentes de Diseño)
 - **NavbarComponent**: Barra de navegación responsive con menú móvil adaptativo
 - **CarouselComponent**: Carrusel de imágenes principal en la página de inicio
+- **FooterComponent**: Pie de página con información de contacto y enlaces
+
+#### Features (Características)
 - **AboutComponent**: Página de inicio con información sobre Mundo Marcial
-- **AcademiaComponent**: Información detallada sobre la academia
+- **AcademiaPageComponent**: Página principal con información detallada sobre la academia
+  - **HorariosComponent**: Muestra los horarios de clases
+  - **InstructoresComponent**: Información sobre los instructores
+  - **UbicacionComponent**: Información de ubicación de las sedes
 - **CapsulasComponent**: Cápsulas educativas y contenido formativo
 - **GaleriaComponent**: Galería de imágenes de eventos y actividades
 - **EventosComponent**: Información sobre eventos y actividades
-- **FooterComponent**: Pie de página con información de contacto y enlaces
+
+#### Shared (Compartidos)
+- **NotFoundComponent**: Componente para páginas no encontradas (404)
 
 ### Funcionalidades
 
+- ✅ Arquitectura modular con separación de features, layout y shared
+- ✅ Lazy loading de componentes para optimizar la carga inicial
 - ✅ Navegación responsive con menú adaptativo para móviles
 - ✅ Animaciones de transición entre rutas
 - ✅ Scroll automático al inicio al cambiar de ruta
 - ✅ Diseño responsive con Bootstrap 5
-- ✅ Componentes de Material Design
-- ✅ Optimización de carga con preload de recursos
 - ✅ Integración con FontAwesome para iconos
+- ✅ Módulos independientes por feature para mejor organización
 
 ### Optimizaciones
 
 El proyecto incluye varias optimizaciones:
 
-- **Preload de recursos críticos**: Fuentes y estilos se cargan de forma asíncrona
-- **Lazy loading**: Estrategia de precarga de módulos configurada
-- **Service Worker**: Preparado para PWA (Progressive Web App)
+- **Lazy loading de componentes**: Los componentes principales se cargan bajo demanda usando `loadComponent()`
+- **Arquitectura modular**: Separación clara entre features, layout y componentes compartidos
+- **Módulos por feature**: Cada característica principal tiene su propio módulo para mejor organización y mantenibilidad
 - **Optimización de bundles**: Configuración de chunks y optimización de producción
 
 ## 📄 Licencia
@@ -88,7 +111,7 @@ Este proyecto es privado y pertenece a Mundo Marcial.
 
 ## 📞 Contacto
 
-Para más información sobre Mundo Marcial, visita el sitio web o contacta a través de los canales oficiales.
+Para más información sobre Mundo Marcial, visita el sitio web o contactanos a través de los canales oficiales.
 
 ---
 

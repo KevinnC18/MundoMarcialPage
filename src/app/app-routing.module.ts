@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
+import { AboutComponent } from './features/about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'inicio', component: AboutComponent },
   {
     path: 'academia',
-    loadComponent: () => import('./components/academia/academia.component').then(m => m.AcademiaComponent)
+    loadComponent: () => import('./features/academia/pages/academia-page/academia-page.component').then(m => m.AcademiaPageComponent)
   },
   {
     path: 'capsulas',
-    loadComponent: () => import('./components/capsulas/capsulas.component').then(m => m.CapsulasComponent)
+    loadComponent: () => import('./features/capsulas/capsulas.component').then(m => m.CapsulasComponent)
   },
   {
     path: 'galeria',
-    loadComponent: () => import('./components/galeria/galeria.component').then(m => m.GaleriaComponent)
+    loadComponent: () => import('./features/galeria/galeria.component').then(m => m.GaleriaComponent)
   },
   {
     path: 'eventos',
-    loadComponent: () => import('./components/eventos/eventos.component').then(m => m.EventosComponent)
+    loadComponent: () => import('./features/eventos/eventos.component').then(m => m.EventosComponent)
   },
   {
     path: '**',

@@ -1,0 +1,209 @@
+/* Footer principal: fondo, color y tipografía */
+.main-footer {
+  background: linear-gradient(135deg, #353535 0%, #292929 100%);
+  color: #fff;
+  font-family: var(--font-main);
+  padding: 2rem 0.5rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 0;
+}
+
+/* Contenedor principal de columnas del footer */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* Cada columna del footer */
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+  margin-bottom: 2rem;
+}
+
+/* Columna de logo */
+.footer-logo-col {
+  flex: 1 1 260px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo Mundo Marcial */
+.footer-logo {
+  width: 10rem;
+  margin-bottom: 1.5rem;
+  user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Información de sedes y contacto */
+.footer-branch strong {
+  color: var(--color-footer-branch);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.footer-branch p {
+  margin: 0.2rem 0 1rem 0;
+  color: var(--color-footer-contact);
+  font-size: 0.97rem;
+}
+
+.footer-contact {
+  margin-bottom: 1rem;
+  color: var(--color-footer-contact);
+  font-size: 0.97rem;
+}
+
+.footer-contact strong {
+  color: var(--color-footer-branch);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Redes sociales */
+.footer-cert-social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: var(--color-footer-social);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--color-footer-social-hover);
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: var(--color-footer-social);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--color-footer-social-hover);
+}
+
+/* Línea divisoria visual */
+.footer-divider {
+  border: none;
+  border-top: 2px solid var(--color-footer-divider);
+  margin: 2rem 0 1.5rem 0;
+}
+
+/* Información legal y derechos reservados */
+.footer-bottom {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #999;
+  font-size: 0.85rem;
+  margin: 0.3rem 0;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-bottom {
+    margin-top: 1rem;
+  }
+
+  .footer-cert-social {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    flex: 1;
+    font-size: 0.8rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+    width: 8rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+
+  .footer-contact {
+    margin: 0 auto;
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}

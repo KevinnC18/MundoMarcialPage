@@ -5,7 +5,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
   animations: [
     trigger('routeAnimations', [
       transition('* <=> *', [
