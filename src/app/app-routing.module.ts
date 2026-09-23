@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './features/about/about.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -18,12 +19,8 @@ const routes: Routes = [
     loadComponent: () => import('./features/galeria/galeria.component').then(m => m.GaleriaComponent)
   },
   {
-    path: 'eventos',
-    loadComponent: () => import('./features/eventos/eventos.component').then(m => m.EventosComponent)
-  },
-  {
     path: '**',
-    loadComponent: () => import('./shared/components/not-found/not-found.component').then(m => m.NotFoundComponent)
+    component: NotFoundComponent
   }
 ];
 

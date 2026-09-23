@@ -9,7 +9,6 @@ import { SharedModule } from './shared/components/shared.module';
 import { AcademiaModule } from './features/academia/academia.module';
 import { AboutModule } from './features/about/about.module';
 import { GaleriaModule } from './features/galeria/galeria.module';
-import { EventosModule } from './features/eventos/eventos.module';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,7 @@ import { EventosModule } from './features/eventos/eventos.module';
     // Features
     AcademiaModule,
     AboutModule,
-    GaleriaModule,
-    EventosModule
+    GaleriaModule
   ],
   bootstrap: [AppComponent]
 })

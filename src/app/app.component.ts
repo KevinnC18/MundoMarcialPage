@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { LayoutModule } from "./layout/layout.module";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
         animate('450ms ease', style({ opacity: 1, transform: 'translateX(0)' }))
       ])
     ])
-  ]
+  ],
 })
 export class AppComponent {
   title = 'mundomarcial-frontend';

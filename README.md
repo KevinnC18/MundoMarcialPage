@@ -1,6 +1,6 @@
 # Mundo Marcial - Frontend
 
-Frontend web de **Mundo Marcial**, una escuela de Taekwondo y formación deportiva WT con presencia en las ciudades de Bogotá y Villavicencio. Esta aplicación web proporciona información sobre la academia, eventos, cápsulas educativas, galería de imágenes y más.
+Frontend web de **Mundo Marcial**, una escuela de Taekwondo y formación deportiva WT con presencia en las ciudades de Bogotá y Villavicencio. Esta aplicación web proporciona información sobre la academia, cápsulas educativas, galería de imágenes y más.
 
 ## 🚀 Tecnologías
 
@@ -29,7 +29,6 @@ mundomarcial-frontend/
 │   │   │   │   └── pages/         # Páginas del módulo
 │   │   │   │       └── academia-page/ # Página principal de academia
 │   │   │   ├── capsulas/          # Cápsulas educativas
-│   │   │   ├── eventos/           # Módulo de eventos y actividades
 │   │   │   └── galeria/           # Módulo de galería de imágenes
 │   │   ├── layout/                # Componentes de diseño compartidos
 │   │   │   ├── carousel/          # Carrusel de imágenes principal
@@ -60,7 +59,6 @@ La aplicación incluye las siguientes rutas con lazy loading:
 - `/academia` - Información sobre la academia (AcademiaPageComponent) - *Lazy loaded*
 - `/capsulas` - Cápsulas educativas (CapsulasComponent) - *Lazy loaded*
 - `/galeria` - Galería de imágenes (GaleriaComponent) - *Lazy loaded*
-- `/eventos` - Eventos y actividades (EventosComponent) - *Lazy loaded*
 - `/**` - Página no encontrada (NotFoundComponent) - *Lazy loaded*
 
 ## 🎨 Características
@@ -80,7 +78,6 @@ La aplicación incluye las siguientes rutas con lazy loading:
   - **UbicacionComponent**: Información de ubicación de las sedes
 - **CapsulasComponent**: Cápsulas educativas y contenido formativo
 - **GaleriaComponent**: Galería de imágenes de eventos y actividades
-- **EventosComponent**: Información sobre eventos y actividades
 
 #### Shared (Compartidos)
 - **NotFoundComponent**: Componente para páginas no encontradas (404)
@@ -104,6 +101,12 @@ El proyecto incluye varias optimizaciones:
 - **Arquitectura modular**: Separación clara entre features, layout y componentes compartidos
 - **Módulos por feature**: Cada característica principal tiene su propio módulo para mejor organización y mantenibilidad
 - **Optimización de bundles**: Configuración de chunks y optimización de producción
+
+## 👥 Autor
+
+Este proyecto fue desarrollado por:
+
+- [@KevinC18](https://github.com/KevinnC18)
 
 ## 📄 Licencia
 
